@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Ryfaathir Rahman | Portofolio Web & Digital Content</title>
+  <meta name="description" content="Portofolio Ryfaathir Rahman - Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang dengan keahlian Web Development & Digital Content.">
+  
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23032448'/><text x='50%' y='62%' font-size='50' font-weight='bold' text-anchor='middle' fill='%238cf5e4' font-family='sans-serif'>RR</text></svg>">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+    }
+    main {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    main > :first-child {
+      margin-top: 0 !important;
+    }
+    main > :last-child {
+      margin-bottom: 0 !important;
+    }
+    /* Constrain icon spans so unrendered ligatures never stretch outside containers */
+    .material-symbols-outlined {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.15em;
+      height: 1.15em;
+      max-width: 1.5em;
+      max-height: 1.5em;
+      overflow: hidden;
+      vertical-align: middle;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f0eded;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8ba4cf;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #006a60;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#6fd8c8",
+            "surface-dim": "#dcd9d9",
+            "secondary-fixed": "#8cf5e4",
+            "on-primary-fixed-variant": "#2d476d",
+            "surface-tint": "#465f86",
+            "on-primary-fixed": "#001c3b",
+            "error": "#ba1a1a",
+            "inverse-surface": "#303030",
+            "surface-container-highest": "#e4e2e1",
+            "secondary": "#006a60",
+            "outline": "#74777f",
+            "on-tertiary-fixed": "#0b1c30",
+            "on-tertiary-container": "#94a4bd",
+            "primary-container": "#1f3a5f",
+            "surface-container-low": "#f6f3f2",
+            "secondary-container": "#8cf5e4",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0f0",
+            "surface-variant": "#e4e2e1",
+            "primary-fixed": "#d5e3ff",
+            "on-secondary-fixed": "#00201c",
+            "primary": "#032448",
+            "tertiary-fixed-dim": "#b7c8e1",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474e",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#aec8f4",
+            "on-secondary-fixed-variant": "#005048",
+            "primary-fixed-dim": "#aec8f4",
+            "tertiary": "#142538",
+            "surface-container-high": "#eae7e7",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#007166",
+            "on-primary-container": "#8ba4cf",
+            "surface-container": "#f0eded",
+            "on-surface": "#1b1c1c",
+            "surface-bright": "#fcf9f8",
+            "outline-variant": "#c4c6cf",
+            "background": "#fcf9f8",
+            "tertiary-container": "#2a3a4f",
+            "tertiary-fixed": "#d3e4fe",
+            "surface": "#fcf9f8",
+            "on-tertiary-fixed-variant": "#38485d",
+            "on-error": "#ffffff",
+            "on-background": "#1b1c1c",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "3rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "margin-tablet": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "gutter-desktop": "2rem"
+          },
+          "fontFamily": {
+            "label-ui": [ "Inter", "sans-serif" ],
+            "body-lead": [ "Inter", "sans-serif" ],
+            "display-hero-mobile": [ "Space Grotesk", "sans-serif" ],
+            "label-code": [ "Space Grotesk", "monospace" ],
+            "headline-section": [ "Space Grotesk", "sans-serif" ],
+            "body-medium": [ "Inter", "sans-serif" ],
+            "headline-card": [ "Space Grotesk", "sans-serif" ],
+            "label-meta": [ "Inter", "sans-serif" ],
+            "body-sm": [ "Inter", "sans-serif" ],
+            "headline-section-mobile": [ "Space Grotesk", "sans-serif" ],
+            "body-default": [ "Inter", "sans-serif" ],
+            "headline-sub": [ "Space Grotesk", "sans-serif" ],
+            "display-hero": [ "Space Grotesk", "sans-serif" ]
+          },
+          "fontSize": {
+            "label-ui": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ],
+            "body-lead": [ "18px", { "lineHeight": "28.8px", "letterSpacing": "-0.005em", "fontWeight": "400" } ],
+            "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ],
+            "label-code": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ],
+            "headline-section": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ],
+            "body-medium": [ "16px", { "lineHeight": "25.6px", "letterSpacing": "0em", "fontWeight": "500" } ],
+            "headline-card": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ],
+            "label-meta": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ],
+            "body-sm": [ "14px", { "lineHeight": "22.4px", "letterSpacing": "0em", "fontWeight": "400" } ],
+            "headline-section-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ],
+            "body-default": [ "16px", { "lineHeight": "25.6px", "letterSpacing": "0em", "fontWeight": "400" } ],
+            "headline-sub": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ],
+            "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ]
+          },
+          "screens": {
+            "xs": "420px"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-default text-body-default text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container w-full max-w-full overflow-x-hidden relative">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(31,58,95,0.06)] transition-all duration-300">
+    <div class="h-16 sm:h-20 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#beranda" class="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(3,36,72,0.15)] group-hover:scale-105 transition-transform shrink-0">
+          <span class="font-headline-sub text-headline-sub font-bold text-on-primary tracking-tight">RR</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="font-headline-card text-[15px] sm:text-headline-card text-primary font-bold tracking-tight">Ryfaathir Rahman</span>
+          <span class="w-2 h-2 rounded-full bg-secondary inline-block shrink-0"></span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav id="desktop-nav" class="hidden xl:flex items-center gap-1 2xl:gap-1.5">
+        <a class="nav-item transition-all bg-secondary-container text-on-secondary-container font-semibold rounded-lg px-2.5 2xl:px-3 py-1.5 font-label-ui text-[13px] 2xl:text-label-ui" data-section="beranda" href="#beranda">Beranda</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="tentang" href="#tentang">Tentang</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="keterampilan" href="#keterampilan">Keterampilan</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="proyek" href="#proyek">Proyek</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="pengalaman" href="#pengalaman">Pengalaman</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="pendidikan" href="#pendidikan">Pendidikan</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="sertifikat" href="#sertifikat">Sertifikat</a>
+        <a class="nav-item font-label-ui text-[13px] 2xl:text-label-ui text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors px-2.5 2xl:px-3 py-1.5 rounded-lg" data-section="kontak" href="#kontak">Kontak</a>
+      </nav>
+
+      <!-- Action Buttons & Mobile Toggle -->
+      <div class="flex items-center gap-2 sm:gap-space-sm shrink-0">
+        <a id="btn-download-cv" class="hidden md:inline-flex items-center gap-space-xs bg-secondary text-on-secondary font-label-ui text-label-ui rounded-full px-space-md py-2.5 hover:bg-on-secondary-container transition-all shadow-[0_4px_12px_rgba(0,106,96,0.18)] active:scale-95" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
+          <span class="material-symbols-outlined text-[18px]">download</span>
+          <span>Unduh CV</span>
+        </a>
+        
+        <a href="#tentang" title="Profil Ryfaathir" class="w-8 h-8 rounded-full bg-surface-container-high ring-2 ring-secondary-container flex items-center justify-center text-primary hover:bg-secondary-container transition-colors overflow-hidden shrink-0">
+          <img src="assets/images/profile.jpg" alt="Ryfaathir" class="w-full h-full object-cover object-[center_45%]" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+          <span class="material-symbols-outlined text-[18px] hidden">person</span>
+        </a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors flex items-center justify-center shrink-0" type="button">
+          <span id="menu-icon" class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-5rem)] overflow-y-auto bg-surface-container-lowest/98 backdrop-blur-2xl border-b border-outline-variant/40 shadow-xl transition-all duration-300">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet py-4 flex flex-col gap-1.5">
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-primary font-semibold hover:bg-secondary-container/30 transition-colors flex items-center justify-between" href="#beranda">
+          <span>Beranda</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#tentang">
+          <span>Tentang</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#keterampilan">
+          <span>Keterampilan</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#proyek">
+          <span>Proyek</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#pengalaman">
+          <span>Pengalaman</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#pendidikan">
+          <span>Pendidikan</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#sertifikat">
+          <span>Sertifikat &amp; Prestasi</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-item py-2.5 px-4 rounded-xl text-on-surface-variant font-medium hover:bg-secondary-container/30 hover:text-primary transition-colors flex items-center justify-between" href="#kontak">
+          <span>Kontak</span>
+          <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+        </a>
+        
+        <div class="pt-3 border-t border-surface-container-highest mt-2 flex flex-col gap-2">
+          <a class="w-full inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary font-label-ui text-label-ui rounded-xl py-3 hover:bg-on-secondary-container transition-all shadow-md active:scale-95" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span>Unduh Berkas CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="w-full max-w-full overflow-x-hidden pt-16 sm:pt-20 bg-background">
+    <div class="flex flex-col w-full max-w-full overflow-x-hidden">
+
+      <!-- ==================== SECTION 1: HERO (BERANDA) ==================== -->
+      <section class="relative w-full bg-surface-container-lowest overflow-hidden py-12 sm:py-16 lg:py-24 scroll-mt-16 sm:scroll-mt-20" id="beranda">
+        <!-- Subtle architectural background tint -->
+        <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/60 to-transparent pointer-events-none"></div>
+        <div class="relative max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-10 sm:gap-16">
+          
+          <!-- Top Two-Column Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+            
+            <!-- Left Column: Copy & Actions -->
+            <div class="lg:col-span-7 flex flex-col items-start gap-5 sm:gap-6">
+              <!-- Teal status badge -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span class="font-label-code text-label-code font-semibold tracking-wide uppercase">Halo, saya</span>
+              </div>
+              
+              <!-- Main Hero Heading -->
+              <div class="flex flex-col gap-2">
+                <h1 class="font-display-hero text-[30px] xs:text-[36px] sm:text-display-hero-mobile lg:text-display-hero text-primary tracking-tight font-bold leading-tight break-words">
+                  Ryfaathir Rahman
+                </h1>
+                <p class="font-headline-sub text-[15px] sm:text-headline-sub text-on-surface-variant font-medium">
+                  Mahasiswa Teknik Informatika <span class="text-secondary font-semibold">|</span> Web Development &amp; Digital Content
+                </p>
+              </div>
+              
+              <!-- Lead Introduction -->
+              <p class="font-body-lead text-[15px] sm:text-body-lead text-on-surface-variant max-w-xl leading-relaxed">
+                Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang yang memiliki dasar di bidang pengembangan website serta pengalaman di bidang desain pemasaran dan produksi konten visual.
+              </p>
+              
+              <!-- CTAs -->
+              <div class="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-3 sm:gap-4 pt-2 w-full xs:w-auto">
+                <a class="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary font-label-ui text-label-ui px-6 py-3 rounded-lg shadow-[0_4px_16px_rgba(0,106,96,0.25)] hover:bg-on-secondary-container transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0" href="#kontak">
+                  <span>Hubungi Saya</span>
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-primary font-label-ui text-label-ui px-6 py-3 rounded-lg border border-outline-variant hover:border-primary hover:bg-surface-container-low transition-all duration-200 shadow-sm" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                  <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+                  </svg>
+                  <span>Lihat GitHub</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Right Column: Profile Frame & Badge -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end w-full">
+              <div class="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[340px] aspect-square">
+                <!-- Accent Backdrop geometric ring -->
+                <div class="absolute -inset-2 sm:-inset-3 rounded-2xl bg-gradient-to-tr from-secondary-fixed-dim/40 via-secondary/10 to-primary/5 transform -rotate-2"></div>
+                
+                <!-- Main Photo Container -->
+                <div class="relative w-full h-full rounded-2xl overflow-hidden bg-surface-container-high shadow-[0_16px_36px_rgba(3,36,72,0.12)] group">
+                  <!-- Dynamic Image with graceful fallback -->
+                  <img id="user-avatar-img" src="assets/images/profile.jpg" alt="Ryfaathir Rahman" class="w-full h-full object-cover object-[center_60%] transition-transform duration-500 group-hover:scale-105" onload="document.getElementById('avatar-placeholder').classList.add('hidden');" onerror="this.classList.add('hidden'); document.getElementById('avatar-placeholder').classList.remove('hidden');">
+                  
+                  <!-- Placeholder UI (Fallback if image missing) -->
+                  <div id="avatar-placeholder" class="hidden w-full h-full flex flex-col items-center justify-center bg-surface-container-high border-2 border-dashed border-outline-variant/70 text-on-surface-variant gap-3 p-6 text-center select-none">
+                    <div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+                      <span class="material-symbols-outlined text-[36px]">account_circle</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span class="font-headline-sub text-headline-sub font-semibold text-primary">Pasfoto Siap Diganti</span>
+                      <span class="font-label-meta text-label-meta text-on-surface-variant">Simpan foto di assets/images/profile.jpg</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Floating Availability Chip -->
+                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-auto max-w-[95%] bg-surface-container-lowest/95 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.08)] border border-secondary/30 flex items-center gap-2">
+                  <span class="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-full w-full bg-secondary"></span>
+                  </span>
+                  <span class="font-label-ui text-[12px] sm:text-label-ui font-semibold text-primary whitespace-nowrap">Terbuka untuk Magang / Kerja Praktik</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Stats Row (Full Width Bottom) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-4 sm:pt-6">
+            <!-- Stat 1 -->
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-display-hero-mobile text-[30px] sm:text-display-hero-mobile font-bold text-secondary">3.46</span>
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">grade</span>
+                </div>
+              </div>
+              <h3 class="font-headline-sub text-headline-sub font-bold text-primary">IPK 3.46</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">S1 Teknik Informatika UMM</p>
+            </div>
+            <!-- Stat 2 -->
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-display-hero-mobile text-[30px] sm:text-display-hero-mobile font-bold text-secondary">6+</span>
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">code_blocks</span>
+                </div>
+              </div>
+              <h3 class="font-headline-sub text-headline-sub font-bold text-primary">6 Proyek Unggulan</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fullstack, AI, Mobile &amp; Desktop</p>
+            </div>
+            <!-- Stat 3 -->
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-display-hero-mobile text-[30px] sm:text-display-hero-mobile font-bold text-secondary">30+</span>
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">groups</span>
+                </div>
+              </div>
+              <h3 class="font-headline-sub text-headline-sub font-bold text-primary">30 Mahasiswa Didampingi</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Liaison Officer Ospek Informatika</p>
+            </div>
+            <!-- Stat 4 -->
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-display-hero-mobile text-[30px] sm:text-display-hero-mobile font-bold text-secondary">4</span>
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">verified</span>
+                </div>
+              </div>
+              <h3 class="font-headline-sub text-headline-sub font-bold text-primary">4 Sertifikat</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kompetensi &amp; Kepemimpinan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 2: TENTANG SAYA ==================== -->
+      <section class="w-full bg-surface-container-lowest py-14 sm:py-20 lg:py-24 scroll-mt-20" id="tentang">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+            <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Tentang Saya</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+          
+          <!-- Content Split (65% text, 35% side info) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <!-- Left: Editorial Paragraph -->
+            <div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-5 sm:gap-6">
+              <p class="font-body-lead text-[16px] sm:text-body-lead text-on-surface leading-relaxed">
+                Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang yang memiliki dasar kuat di bidang rekayasa perangkat lunak dan pengembangan website, serta pengalaman di bidang desain pemasaran dan produksi konten visual melalui Praktik Kerja Lapangan.
+              </p>
+              <p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+                Berpengalaman memimpin dan mendampingi kelompok mahasiswa dalam kegiatan kampus. Terbiasa bekerja dalam tim, berkomunikasi dengan baik, dan bertanggung jawab. Siap belajar dan berkontribusi di lingkungan profesional melalui program magang.
+              </p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <div class="flex items-center gap-3 p-3.5 sm:p-4 rounded-xl bg-surface-container-low border border-outline-variant/40">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">psychology</span>
+                  </div>
+                  <div>
+                    <p class="font-label-ui text-label-ui text-primary font-semibold">Problem Solver</p>
+                    <p class="font-label-meta text-label-meta text-on-surface-variant">Logis, terstruktur &amp; solutif</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 p-3.5 sm:p-4 rounded-xl bg-surface-container-low border border-outline-variant/40">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">handshake</span>
+                  </div>
+                  <div>
+                    <p class="font-label-ui text-label-ui text-primary font-semibold">Kolaboratif</p>
+                    <p class="font-label-meta text-label-meta text-on-surface-variant">Komunikasi efektif &amp; adaptif</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right: Modern Sidebar Info Card -->
+            <div class="lg:col-span-5 xl:col-span-4 p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/60 shadow-[0_4px_24px_rgba(31,58,95,0.04)] flex flex-col gap-5 sm:gap-6">
+              <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary pb-3 border-b border-surface-container-high">Informasi Pokok</h3>
+              <div class="flex flex-col gap-4 sm:gap-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">location_on</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-meta text-[11px] sm:text-label-meta uppercase tracking-wider text-on-surface-variant font-semibold">Lokasi</span>
+                    <span class="font-body-medium text-[15px] sm:text-body-medium font-semibold text-primary">Malang, Jawa Timur</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">school</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-meta text-[11px] sm:text-label-meta uppercase tracking-wider text-on-surface-variant font-semibold">Status Akademik</span>
+                    <span class="font-body-medium text-[15px] sm:text-body-medium font-semibold text-primary">Mahasiswa S1 Informatika</span>
+                    <span class="font-body-sm text-[13px] sm:text-body-sm text-on-surface-variant">Universitas Muhammadiyah Malang</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">code</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-meta text-[11px] sm:text-label-meta uppercase tracking-wider text-on-surface-variant font-semibold">Fokus Bidang</span>
+                    <span class="font-body-medium text-[15px] sm:text-body-medium font-semibold text-primary">Web Development &amp; Digital Content</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3: KETERAMPILAN ==================== -->
+      <section class="w-full bg-surface-container-low py-14 sm:py-20 lg:py-24 scroll-mt-20" id="keterampilan">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+            <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Keterampilan</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+          
+          <!-- Skills Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Card 1: Hard Skills -->
+            <div class="lg:col-span-2 p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col gap-5 sm:gap-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-surface-container-highest">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[22px]">terminal</span>
+                  </div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">Hard Skills</h3>
+                </div>
+                <span class="font-label-code text-[11px] sm:text-label-code text-secondary font-semibold uppercase tracking-wider">Teknikal &amp; Visual</span>
+              </div>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <!-- Tag 1 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">web</span>
+                  <span class="font-medium">Pengembangan Website (Full-Stack)</span>
+                </div>
+                <!-- Tag Payment Gateway -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">payments</span>
+                  <span class="font-medium">Payment Gateway &amp; E-Commerce (Midtrans, Webhooks)</span>
+                </div>
+                <!-- Tag Frameworks -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">layers</span>
+                  <span class="font-medium">Frameworks (Next.js 14, Laravel, FastAPI)</span>
+                </div>
+                <!-- Tag 2 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">smart_toy</span>
+                  <span class="font-medium">AI &amp; Automation (Whisper, Gemini AI)</span>
+                </div>
+                <!-- Tag 3 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">phone_android</span>
+                  <span class="font-medium">Mobile App (Flutter &amp; Dart)</span>
+                </div>
+                <!-- Tag 4 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">desktop_windows</span>
+                  <span class="font-medium">Desktop Utility (C# .NET 8, WPF)</span>
+                </div>
+                <!-- Tag 5 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">database</span>
+                  <span class="font-medium">Database (MySQL, Drift SQLite)</span>
+                </div>
+                <!-- Tag 6 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">palette</span>
+                  <span class="font-medium">Desain Grafis &amp; Pemasaran Produk</span>
+                </div>
+                <!-- Tag 7 -->
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-primary hover:border-secondary transition-colors text-[12px] sm:text-label-code">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">movie_edit</span>
+                  <span class="font-medium">Editing &amp; Produksi Video Produk</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 2: Bahasa -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-5 sm:gap-6">
+              <div class="flex items-center gap-3 pb-4 border-b border-surface-container-highest">
+                <div class="w-10 h-10 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">translate</span>
+                </div>
+                <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">Bahasa</h3>
+              </div>
+              <div class="p-4 sm:p-5 rounded-xl bg-surface-container-low border border-secondary/20 flex items-center justify-between">
+                <div class="flex flex-col">
+                  <span class="font-headline-sub text-[16px] sm:text-headline-sub font-bold text-primary">Bahasa Indonesia</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Penutur Asli (Native)</span>
+                </div>
+                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+              </div>
+              <p class="font-label-meta text-[12px] sm:text-label-meta text-on-surface-variant">Kemampuan komunikasi verbal dan penulisan dokumentasi teknis yang lugas dan terstruktur.</p>
+            </div>
+            
+            <!-- Card 3: Soft Skills (Full Row) -->
+            <div class="lg:col-span-3 p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col gap-5 sm:gap-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-surface-container-highest">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[22px]">diversity_3</span>
+                  </div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">Soft Skills &amp; Kepemimpinan</h3>
+                </div>
+                <span class="font-label-code text-[11px] sm:text-label-code text-secondary font-semibold uppercase tracking-wider">Interpersonal</span>
+              </div>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-semibold text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-[16px] sm:text-[18px]">military_tech</span>
+                  <span>Kepemimpinan</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-on-surface hover:border-secondary transition-colors text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">forum</span>
+                  <span>Komunikasi</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-on-surface hover:border-secondary transition-colors text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">groups</span>
+                  <span>Kerja Tim</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-on-surface hover:border-secondary transition-colors text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">schedule</span>
+                  <span>Manajemen Waktu</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-on-surface hover:border-secondary transition-colors text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">balance</span>
+                  <span>Manajemen Konflik</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-surface-container-low border border-outline-variant/70 text-on-surface hover:border-secondary transition-colors text-[13px] sm:text-label-ui">
+                  <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">insights</span>
+                  <span>Pengambilan Keputusan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: PROYEK ==================== -->
+      <section class="w-full bg-surface-container-lowest py-14 sm:py-20 lg:py-24 scroll-mt-20" id="proyek">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header & Filter Tabs -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
+            <div class="flex flex-col gap-3">
+              <div class="inline-flex items-center gap-2 text-secondary font-label-code text-[12px] sm:text-label-code uppercase tracking-wider font-semibold">
+                <span class="material-symbols-outlined text-[18px]">terminal</span>
+                <span>Portofolio Karya &amp; Rekayasa</span>
+              </div>
+              <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Proyek Unggulan</h2>
+              <div class="w-12 h-1 rounded-full bg-secondary"></div>
+            </div>
+            
+            <!-- Category Filter Tabs (Scrollable/Wrap) -->
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-xl bg-surface-container-low border border-outline-variant/60" id="project-filters">
+              <button class="project-filter-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-label-ui text-[12px] sm:text-label-ui font-semibold bg-secondary text-on-secondary transition-all shadow-sm" data-filter="all">Semua (6)</button>
+              <button class="project-filter-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-label-ui text-[12px] sm:text-label-ui font-medium text-on-surface-variant hover:text-primary transition-all" data-filter="web">Web &amp; Fullstack (3)</button>
+              <button class="project-filter-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-label-ui text-[12px] sm:text-label-ui font-medium text-on-surface-variant hover:text-primary transition-all" data-filter="ai">AI &amp; SaaS (1)</button>
+              <button class="project-filter-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-label-ui text-[12px] sm:text-label-ui font-medium text-on-surface-variant hover:text-primary transition-all" data-filter="mobile">Mobile App (1)</button>
+              <button class="project-filter-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-label-ui text-[12px] sm:text-label-ui font-medium text-on-surface-variant hover:text-primary transition-all" data-filter="desktop">Desktop (1)</button>
+            </div>
+          </div>
+          
+          <!-- Project Cards Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch" id="projects-container">
+            
+            <!-- PROYEK 1: CreatorVault (Fullstack E-Commerce & Payment Gateway) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="web">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-secondary/15 text-secondary font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">shopping_cart_checkout</span>
+                    E-Commerce &amp; Payment Gateway
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">security</span>
+                    Midtrans &bull; Anti-Piracy
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    CreatorVault
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Platform E-Commerce Produk Digital &amp; Payment Gateway Otomatis
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Platform etalase dan transaksi produk digital modern (seperti Gumroad / Lynk.id) bertenaga Next.js 14 App Router. Dilengkapi integrasi Midtrans Snap (QRIS instan &amp; Virtual Account Bank), verifikasi pelunasan otomatis via Webhook Listener dengan signature SHA-512 anti-fraud, serta sistem pengamanan unduhan aset digital menggunakan token acak 256-bit berbatas waktu 24 jam untuk mencegah pembajakan file.
+                </p>
+              </div>
+              
+              <!-- Browser Mockup Window: Obsidian Theme -->
+              <div class="rounded-xl overflow-hidden bg-[#0d1117] text-white border border-[#21262d] shadow-md flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-[#161b22] border-b border-[#21262d] flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                  </div>
+                  <div class="px-4 sm:px-6 py-0.5 rounded-md bg-[#0d1117] font-label-code text-[10px] sm:text-[11px] text-gray-300 text-center max-w-[200px] sm:max-w-xs truncate">
+                    creatorvault.store/@ryfaathir
+                  </div>
+                  <div class="w-6 sm:w-8"></div>
+                </div>
+                
+                <div class="p-3.5 sm:p-5 flex flex-col gap-3.5 sm:gap-4 bg-[#0d1117]">
+                  <div class="p-3 sm:p-4 rounded-xl bg-[#161b22] border border-[#30363d] flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">deployed_code</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline-sub text-[13px] sm:text-[14px] font-bold text-gray-100">Full-Stack SaaS Starter Kit</span>
+                        <span class="font-label-code text-[11px] text-teal-400 font-semibold">Rp 149.000</span>
+                      </div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 font-label-code text-[10px] sm:text-[11px] font-semibold border border-emerald-500/30">QRIS / VA Ready</span>
+                  </div>
+                  <div class="flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-[11px] font-label-code text-gray-400">
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Midtrans Snap Modal</span>
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Webhook SHA-512</span>
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-400"></span> Tokenized Download 24h</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Next.js 14</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Prisma ORM</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Midtrans SDK</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Webhook SHA512</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">Fullstack &amp; Payment</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROYEK 2: ShadownClip V3 (AI & SaaS Monetization) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="ai">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-secondary/15 text-secondary font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">smart_toy</span>
+                    AI SaaS Platform &amp; Payment
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">workspace_premium</span>
+                    Midtrans VIP &bull; Gemini Flash
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    ShadownClip V3
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Automated YouTube to 9:16 Shorts AI Pipeline &amp; VIP SaaS Monetization
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Platform web bertenaga AI dengan model bisnis SaaS freemium yang mengotomatisasi pengubahan video panjang YouTube menjadi klip vertikal format 9:16 (Shorts, TikTok, Reels). Dilengkapi integrasi <strong>Payment Gateway Midtrans</strong> untuk upgrade langganan VIP (resolusi 1080p, Face Tracking &amp; kuota token ekstra), Google OAuth login, OpenAI Whisper untuk subtitle dinamis, Google Gemini Flash untuk kurasi momen viral, arsitektur task worker Celery + Redis, dan penyimpanan Cloudflare R2.
+                </p>
+              </div>
+              
+              <!-- Browser Mockup Window -->
+              <div class="rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/70 shadow-sm flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-surface-container-high border-b border-outline-variant/40 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                  </div>
+                  <div class="px-4 sm:px-6 py-0.5 rounded-md bg-surface-container-lowest font-label-code text-[10px] sm:text-[11px] text-on-surface-variant text-center max-w-[180px] sm:max-w-xs truncate">
+                    shadownclip-v3.app/dashboard
+                  </div>
+                  <div class="w-6 sm:w-8"></div>
+                </div>
+                
+                <div class="p-3.5 sm:p-4 bg-surface-container-lowest flex flex-col items-center justify-center gap-3">
+                  <div class="relative w-full max-w-[280px] h-48 sm:h-56 rounded-lg overflow-hidden bg-surface-container-low border border-outline-variant/50 shadow-inner flex items-center justify-center">
+                    <img src="assets/images/shadownclip-preview.png" alt="ShadownClip V3 Face Tracking &amp; VIP Preview" class="w-full h-full object-cover" onerror="this.style.display='none'; document.getElementById('sc-placeholder').style.display='flex';">
+                    <div id="sc-placeholder" class="hidden w-full h-full flex-col items-center justify-center text-center p-4 text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[32px] text-secondary">movie_filter</span>
+                      <span class="font-label-ui text-label-ui font-semibold text-primary mt-1">9:16 Video Clipper</span>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-emerald-600/90 text-white backdrop-blur-md rounded px-2 py-0.5 text-center flex items-center gap-1 shadow-sm">
+                      <span class="material-symbols-outlined text-[12px]">verified</span>
+                      <span class="font-label-code text-[9px] font-bold">Midtrans VIP Active</span>
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2 bg-primary/80 backdrop-blur-md rounded px-2.5 py-1 text-center">
+                      <span class="font-label-code text-[10px] sm:text-[11px] text-secondary-fixed font-semibold tracking-wide">● AI Face Tracking Active</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-secondary">closed_caption</span> Auto Subtitles
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-secondary">payments</span> Midtrans VIP
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-secondary">sync</span> Celery + Redis
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">FastAPI</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Next.js / React</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Midtrans Gateway</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Whisper AI</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Gemini Flash</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Celery &amp; Redis</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">AI &amp; SaaS Platform</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROYEK 3: Horti-Apps (Modern Agricultural Marketplace) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="web">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-800 font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">agriculture</span>
+                    Marketplace Agrikultur
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-primary text-on-primary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">hub</span>
+                    Laravel MVC &bull; Multi-Role
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    Horti-Apps
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Platform Marketplace Pertanian Terintegrasi WhatsApp API
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Platform web marketplace agrikultur modern berbasis arsitektur Laravel yang menghubungkan Petani lokal dengan Pengepul secara transparan dan efisien. Menyediakan dasbor terspesialisasi untuk 3 peran (Petani, Pengepul, dan Admin), verifikasi akun pengguna (KYC), katalog produk hasil bumi real-time, manajemen harga acuan pasar, serta Call-to-Action pemesanan langsung melalui integrasi WhatsApp API.
+                </p>
+              </div>
+              
+              <!-- Browser Mockup Window -->
+              <div class="rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/70 shadow-sm flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-surface-container-high border-b border-outline-variant/40 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                  </div>
+                  <div class="px-4 sm:px-6 py-0.5 rounded-md bg-surface-container-lowest font-label-code text-[10px] sm:text-[11px] text-on-surface-variant text-center max-w-[180px] sm:max-w-xs truncate">
+                    horti-apps.local/market-live
+                  </div>
+                  <div class="w-6 sm:w-8"></div>
+                </div>
+                
+                <div class="p-3.5 sm:p-4 bg-surface-container-lowest flex flex-col items-center justify-center gap-3">
+                  <div class="relative w-full h-44 sm:h-52 rounded-lg overflow-hidden bg-surface-container-low border border-outline-variant/50 shadow-inner flex items-center justify-center">
+                    <img src="assets/images/horti-apps-preview.png" alt="Horti-Apps Marketplace Preview" class="w-full h-full object-cover" onerror="this.style.display='none'; document.getElementById('ha-placeholder').style.display='flex';">
+                    <div id="ha-placeholder" class="hidden w-full h-full flex-col items-center justify-center text-center p-4 text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[32px] text-emerald-600">storefront</span>
+                      <span class="font-label-ui text-label-ui font-semibold text-primary mt-1">Horti-Apps Live Market</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-emerald-600">chat</span> WhatsApp Order
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-emerald-600">verified_user</span> Admin KYC
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-label-code px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[13px] text-emerald-600">price_check</span> Harga Acuan
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">PHP 8.2</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Laravel</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">MySQL</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">WhatsApp API</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Vite</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">Web &amp; Marketplace</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROYEK 4: LifeHub V2 (Mobile Android App) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="mobile">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-primary/10 text-primary font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">phone_android</span>
+                    Mobile App – Android / iOS
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-primary text-on-primary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">lock</span>
+                    100% Offline &amp; Encrypted
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    LifeHub V2
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Personal Life Management &amp; Productivity App
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Aplikasi mobile produktivitas pintar berbasis Flutter yang menyatukan 4 modul utama dalam satu genggaman: Pelacak Keuangan (visual FL Chart &amp; budgeting), Brankas Password Terenkripsi (AES-256 &amp; Biometric Auth), Jurnal Trading Multi-Market (analisis performa PnL), serta Jadwal Kuliah &amp; Manajemen Tugas Mahasiswa. Berjalan 100% offline dengan Drift SQLite lokal tanpa dependensi server luar demi keamanan data privasi.
+                </p>
+              </div>
+              
+              <!-- Mobile App Mockup Window -->
+              <div class="rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/70 shadow-sm flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-surface-container-high border-b border-outline-variant/40 flex items-center justify-between">
+                  <span class="font-label-code text-[10px] sm:text-[11px] text-on-surface-variant">Flutter Mobile App • Android / iOS</span>
+                  <div class="flex items-center gap-1 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[14px]">wifi_off</span>
+                    <span class="font-label-code text-[10px]">Offline</span>
+                  </div>
+                </div>
+                
+                <div class="p-4 sm:p-5 bg-surface-container-lowest flex flex-col items-center justify-center gap-3.5 sm:gap-4">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/images/lifehub-icon.png" alt="LifeHub App Icon" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl shadow-md ring-2 ring-secondary/20 shrink-0" onerror="this.style.display='none'; document.getElementById('lh-fallback-icon').style.display='flex';">
+                    <div id="lh-fallback-icon" class="hidden w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary text-secondary-fixed items-center justify-center font-bold text-xl shadow-md shrink-0">LH</div>
+                    <div class="flex flex-col">
+                      <span class="font-headline-sub text-[15px] sm:text-[16px] font-bold text-primary">LifeHub V2 Mobile</span>
+                      <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">Personal Dashboard &amp; Secure Vault</span>
+                    </div>
+                  </div>
+                  
+                  <div class="grid grid-cols-2 gap-2 sm:gap-2.5 w-full max-w-sm">
+                    <div class="p-2 sm:p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 sm:gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">account_balance_wallet</span>
+                      <span class="font-label-code text-[10px] sm:text-[11px] font-medium text-primary">Finance Tracker</span>
+                    </div>
+                    <div class="p-2 sm:p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 sm:gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">key</span>
+                      <span class="font-label-code text-[10px] sm:text-[11px] font-medium text-primary">Password Vault</span>
+                    </div>
+                    <div class="p-2 sm:p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 sm:gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">candlestick_chart</span>
+                      <span class="font-label-code text-[10px] sm:text-[11px] font-medium text-primary">Trading Journal</span>
+                    </div>
+                    <div class="p-2 sm:p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50 flex items-center gap-1.5 sm:gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[16px] sm:text-[18px]">school</span>
+                      <span class="font-label-code text-[10px] sm:text-[11px] font-medium text-primary">Jadwal Kuliah</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Flutter</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Dart</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Riverpod</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Drift SQLite</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Biometric Auth</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">FL Chart</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">Flutter Android/iOS</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROYEK 5: RNM TWEAK (Windows Desktop Utility) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="desktop">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-secondary/15 text-secondary font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">desktop_windows</span>
+                    Windows Desktop Utility
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">speed</span>
+                    C# .NET 8 • Low-Latency
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    RNM TWEAK
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Ultimate Windows Optimization, Gaming Performance &amp; System Utility
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Aplikasi desktop Windows utilitas performa tinggi yang dibangun dengan arsitektur C# .NET 8 dan antarmuka modern Windows 11 Fluent UI (Wpf.Ui). Menghadirkan pemantauan telemetri hardware real-time (CPU, GPU, RAM, Disk, Network), Game Booster 1-klik untuk pembebasan memori background saat bermain game, lebih dari 50 konfigurasi tweak sistem Windows (latensi, jaringan, power plan), serta Restore Center dengan rollback otomatis yang aman.
+                </p>
+              </div>
+              
+              <!-- Windows 11 Fluent UI Mockup Window -->
+              <div class="rounded-xl overflow-hidden bg-[#141923] text-white border border-[#2b3548] shadow-md flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-[#0d121c] border-b border-[#2b3548] flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-secondary-fixed">speed</span>
+                    <span class="font-label-code text-[10px] sm:text-[11px] text-gray-300 font-medium truncate max-w-[170px] sm:max-w-none">RNM Tweak - Windows 11 Fluent</span>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 text-gray-400 text-xs">
+                    <span>—</span>
+                    <span>▢</span>
+                    <span class="text-red-400">✕</span>
+                  </div>
+                </div>
+                
+                <div class="p-3.5 sm:p-5 flex flex-col gap-3.5 sm:gap-4">
+                  <!-- Telemetry Gauges -->
+                  <div class="grid grid-cols-3 gap-1.5 sm:gap-2.5">
+                    <div class="p-2 sm:p-3 rounded-lg bg-[#1c2333] border border-[#2e3b56] flex flex-col">
+                      <span class="font-label-meta text-gray-400 text-[9px] sm:text-[10px] uppercase">CPU Load</span>
+                      <span class="font-headline-sub text-[15px] sm:text-[18px] font-bold text-secondary-fixed">14%</span>
+                      <span class="font-label-meta text-emerald-400 text-[9px] sm:text-[10px]">Optimal</span>
+                    </div>
+                    <div class="p-2 sm:p-3 rounded-lg bg-[#1c2333] border border-[#2e3b56] flex flex-col">
+                      <span class="font-label-meta text-gray-400 text-[9px] sm:text-[10px] uppercase">RAM Usage</span>
+                      <span class="font-headline-sub text-[15px] sm:text-[18px] font-bold text-teal-300">4.1 GB</span>
+                      <span class="font-label-meta text-emerald-400 text-[9px] sm:text-[10px]">-2.3 GB</span>
+                    </div>
+                    <div class="p-2 sm:p-3 rounded-lg bg-[#1c2333] border border-[#2e3b56] flex flex-col">
+                      <span class="font-label-meta text-gray-400 text-[9px] sm:text-[10px] uppercase">GPU Temp</span>
+                      <span class="font-headline-sub text-[15px] sm:text-[18px] font-bold text-emerald-300">38°C</span>
+                      <span class="font-label-meta text-emerald-400 text-[9px] sm:text-[10px]">Cool</span>
+                    </div>
+                  </div>
+                  
+                  <!-- 1-Click Game Booster Bar -->
+                  <div class="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-secondary/30 to-primary-container border border-secondary/40 flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed animate-ping"></span>
+                      <span class="font-label-ui text-[12px] sm:text-[13px] font-bold text-white">1-Click Game Booster</span>
+                    </div>
+                    <span class="px-2.5 py-0.5 sm:py-1 rounded-full bg-secondary text-on-secondary font-label-code text-[10px] sm:text-[11px] font-bold">50+ Tweaks Applied</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">C# 12</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">.NET 8 LTS</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">WPF</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Wpf.Ui (Fluent)</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">MVVM Toolkit</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">Windows API / WMI</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">Standalone .EXE Release</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROYEK 6: Website Galeri Foto (Web Development RPL) -->
+            <div class="project-card p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/70 shadow-[0_8px_30px_rgba(31,58,95,0.06)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-xl transition-all duration-300" data-category="web">
+              <div class="flex flex-col gap-4">
+                <!-- Badges -->
+                <div class="flex flex-wrap items-center justify-between gap-2.5">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-primary/10 text-primary font-label-code text-[11px] sm:text-label-code font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">web</span>
+                    Proyek Uji Kompetensi RPL – SMKN 11 Malang
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    <span class="material-symbols-outlined text-[15px] sm:text-[16px]">verified</span>
+                    Predikat: Kompeten
+                  </span>
+                </div>
+                
+                <div>
+                  <h3 class="font-headline-card text-[20px] sm:text-headline-card font-bold text-primary">
+                    Website Galeri Foto
+                  </h3>
+                  <p class="font-headline-sub text-[14px] sm:text-[15px] text-secondary font-semibold mt-0.5">
+                    Sistem Manajemen &amp; Kurasi Arsip Visual
+                  </p>
+                </div>
+                
+                <p class="font-body-default text-[14px] sm:text-body-default text-on-surface-variant leading-relaxed">
+                  Proyek website galeri foto yang dikerjakan pada Uji Kompetensi Rekayasa Perangkat Lunak (UKOM RPL) dengan predikat Kompeten. Sistem ini memungkinkan katalogisasi arsip visual terstruktur, upload karya beresolusi optimal, pengelompokan album responsif, dan interaksi pengguna berbasis database relasional MySQL.
+                </p>
+              </div>
+              
+              <!-- Browser Mockup Window -->
+              <div class="rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/70 shadow-sm flex flex-col">
+                <div class="h-8 sm:h-9 px-3 sm:px-4 bg-surface-container-high border-b border-outline-variant/40 flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed/90"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                  </div>
+                  <div class="px-4 sm:px-6 py-0.5 rounded-md bg-surface-container-lowest font-label-code text-[10px] sm:text-[11px] text-on-surface-variant text-center max-w-[180px] sm:max-w-xs truncate">
+                    galeri-foto.ukom-rpl.local
+                  </div>
+                  <div class="w-6 sm:w-8"></div>
+                </div>
+                
+                <div class="p-4 sm:p-5 bg-surface-container-lowest">
+                  <img id="project-screenshot-img" src="assets/images/galeri-foto.png" alt="Screenshot Website Galeri Foto" class="w-full h-36 sm:h-44 object-cover rounded-lg hidden" onload="this.classList.remove('hidden'); document.getElementById('project-screenshot-placeholder').classList.add('hidden');" onerror="this.classList.add('hidden'); document.getElementById('project-screenshot-placeholder').classList.remove('hidden');">
+                  
+                  <div id="project-screenshot-placeholder" class="w-full h-36 sm:h-44 rounded-lg border-2 border-dashed border-outline-variant/60 bg-surface-container-low flex flex-col items-center justify-center gap-2 text-on-surface-variant text-center p-3">
+                    <div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+                      <span class="material-symbols-outlined text-[24px]">web_stories</span>
+                    </div>
+                    <span class="font-label-ui text-label-ui font-semibold text-primary text-sm">Screenshot Galeri Foto</span>
+                    <span class="font-label-meta text-[11px] text-on-surface-variant">Simpan tangkapan layar di assets/images/galeri-foto.png</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Tech Stack & Action Footer -->
+              <div class="pt-2 flex flex-col gap-4">
+                <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">PHP</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">MySQL</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">HTML5</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">CSS3</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-[11px] sm:text-[12px] font-medium text-primary">JavaScript</span>
+                </div>
+                
+                <div class="pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3">
+                  <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-3.5 sm:px-4 py-2 rounded-lg font-label-ui text-[13px] sm:text-label-ui hover:bg-primary-container transition-all" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                    <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+                    <span>Lihat di GitHub</span>
+                  </a>
+                  <span class="font-label-code text-[11px] sm:text-[12px] text-secondary font-semibold">Web Development</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 5: PENGALAMAN ==================== -->
+      <section class="w-full bg-surface-container-low py-14 sm:py-20 lg:py-24 scroll-mt-20" id="pengalaman">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+            <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Pengalaman</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+          
+          <!-- Timeline Container -->
+          <div class="relative pl-6 sm:pl-8 border-l-2 border-outline-variant/60 flex flex-col gap-8 sm:gap-12 ml-2 sm:ml-4">
+            
+            <!-- Experience Item 1: PKL -->
+            <div class="relative flex flex-col gap-4">
+              <!-- Timeline Node Dot -->
+              <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-secondary ring-4 ring-surface-container-low"></div>
+              
+              <!-- Card Header & Metadata -->
+              <div class="p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col gap-4 sm:gap-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 sm:pb-4 border-b border-surface-container-highest">
+                  <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <span class="px-2.5 sm:px-3 py-1 rounded-full bg-primary text-on-primary font-label-ui text-[11px] sm:text-label-ui font-semibold">Pengalaman Kerja</span>
+                    <h3 class="font-headline-card text-[18px] sm:text-headline-card font-bold text-primary">Siswa Praktik Kerja Lapangan (Bidang RPL)</h3>
+                  </div>
+                  <span class="font-label-code text-[11px] sm:text-label-code text-on-surface-variant italic">10 Juli – 22 Desember 2023</span>
+                </div>
+                <div class="flex items-center gap-2 text-secondary font-headline-sub text-[15px] sm:text-headline-sub font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">business</span>
+                  <span>CV. Golden Mandiri, Malang</span>
+                </div>
+                
+                <!-- Bullet Points -->
+                <ul class="flex flex-col gap-2.5 sm:gap-3">
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Membuat desain materi pemasaran untuk mempromosikan produk perusahaan</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Memproduksi video produk untuk kebutuhan promosi</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Melakukan editing foto produk agar tampil menarik dan layak dipublikasikan</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface font-semibold text-primary">Memperoleh hasil penilaian "Baik" dari perusahaan</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Experience Item 2: LO Ospek -->
+            <div class="relative flex flex-col gap-4">
+              <!-- Timeline Node Dot -->
+              <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-secondary ring-4 ring-surface-container-low"></div>
+              
+              <!-- Card Header & Metadata -->
+              <div class="p-5 sm:p-6 md:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col gap-4 sm:gap-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 sm:pb-4 border-b border-surface-container-highest">
+                  <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <span class="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-ui text-[11px] sm:text-label-ui font-semibold">Organisasi</span>
+                    <h3 class="font-headline-card text-[18px] sm:text-headline-card font-bold text-primary">Liaison Officer (LO)</h3>
+                  </div>
+                  <span class="font-label-code text-[11px] sm:text-label-code text-on-surface-variant italic">Januari 2026</span>
+                </div>
+                <div class="flex items-center gap-2 text-secondary font-headline-sub text-[15px] sm:text-headline-sub font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">campaign</span>
+                  <span>Ospek Program Studi Teknik Informatika</span>
+                </div>
+                
+                <!-- Bullet Points -->
+                <ul class="flex flex-col gap-2.5 sm:gap-3">
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Menjadi penghubung antara panitia dan peserta untuk memastikan kegiatan berjalan lancar</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Mendampingi <strong class="text-primary font-bold">30 mahasiswa</strong> baru selama rangkaian kegiatan</span>
+                  </li>
+                  <li class="flex items-start gap-2.5 sm:gap-3">
+                    <span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+                    <span class="font-body-default text-[14px] sm:text-body-default text-on-surface">Menyampaikan informasi dan arahan kegiatan kepada peserta dampingan secara tanggap dan akurat</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 6: PENDIDIKAN ==================== -->
+      <section class="w-full bg-surface-container-lowest py-14 sm:py-20 lg:py-24 scroll-mt-20" id="pendidikan">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+            <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Pendidikan</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+          
+          <!-- Education Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <!-- Card 1: UMM -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-lg transition-shadow">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[24px] sm:text-[28px]">school</span>
+                  </div>
+                  <span class="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-code text-[11px] sm:text-label-code font-bold">
+                    IPK: 3.46 / 4.00
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <h3 class="font-headline-card text-[18px] sm:text-headline-card font-bold text-primary">Universitas Muhammadiyah Malang</h3>
+                  <p class="font-headline-sub text-[15px] sm:text-headline-sub text-secondary font-medium mt-1">S1 Teknik Informatika</p>
+                </div>
+              </div>
+              <div class="pt-3.5 sm:pt-4 border-t border-surface-container-high flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant font-medium">Periode Akademik</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-bold">2024 – Sekarang</span>
+              </div>
+            </div>
+            
+            <!-- Card 2: SMKN 11 Malang -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-5 sm:gap-6 hover:shadow-lg transition-shadow">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[24px] sm:text-[28px]">domain</span>
+                  </div>
+                  <span class="px-2.5 sm:px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-ui text-[11px] sm:text-label-ui font-semibold">
+                    Lulusan RPL
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <h3 class="font-headline-card text-[18px] sm:text-headline-card font-bold text-primary">SMK Negeri 11 Malang</h3>
+                  <p class="font-headline-sub text-[15px] sm:text-headline-sub text-secondary font-medium mt-1">Rekayasa Perangkat Lunak (RPL)</p>
+                </div>
+              </div>
+              <div class="pt-3.5 sm:pt-4 border-t border-surface-container-high flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant font-medium">Periode Sekolah</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-bold">2021 – 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 7: SERTIFIKAT & PRESTASI ==================== -->
+      <section class="w-full bg-surface-container-low py-14 sm:py-20 lg:py-24 scroll-mt-20" id="sertifikat">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 mb-8 sm:mb-12">
+            <h2 class="font-headline-section text-[28px] xs:text-headline-section-mobile lg:text-headline-section font-bold text-primary">Sertifikat &amp; Prestasi</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+          
+          <!-- 2x2 Grid of 4 Certificates -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <!-- Cert 1 -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-4 sm:gap-5 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between gap-3">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[26px]">workspace_premium</span>
+                </div>
+                <span class="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-code text-[11px] sm:text-label-code font-bold">
+                  Kompeten
+                </span>
+              </div>
+              <div class="flex flex-col gap-1.5 sm:gap-2">
+                <h3 class="font-headline-card text-[17px] sm:text-headline-card font-bold text-primary">
+                  Sertifikat Kompetensi Rekayasa Perangkat Lunak
+                </h3>
+                <p class="font-body-sm text-[13px] sm:text-body-sm text-on-surface-variant">
+                  SMKN 11 Malang &amp; Rakryan (PT WeSolve Solusi Indonesia)
+                </p>
+              </div>
+              <div class="pt-3 border-t border-surface-container-highest flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">Tahun Terbit</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-semibold">2024</span>
+              </div>
+            </div>
+            
+            <!-- Cert 2 -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-4 sm:gap-5 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between gap-3">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[26px]">psychology_alt</span>
+                </div>
+                <span class="px-2.5 sm:px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-code text-[11px] sm:text-label-code font-bold">
+                  Lulus
+                </span>
+              </div>
+              <div class="flex flex-col gap-1.5 sm:gap-2">
+                <h3 class="font-headline-card text-[17px] sm:text-headline-card font-bold text-primary">
+                  Pelatihan Pembentukan Kepribadian &amp; Kepemimpinan (P2KK)
+                </h3>
+                <p class="font-body-sm text-[13px] sm:text-body-sm text-on-surface-variant">
+                  Universitas Muhammadiyah Malang
+                </p>
+              </div>
+              <div class="pt-3 border-t border-surface-container-highest flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">Tahun Terbit</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-semibold">2024</span>
+              </div>
+            </div>
+            
+            <!-- Cert 3 -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-4 sm:gap-5 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between gap-3">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[26px]">badge</span>
+                </div>
+                <span class="px-2.5 sm:px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-code text-[11px] sm:text-label-code font-semibold">
+                  Terverifikasi
+                </span>
+              </div>
+              <div class="flex flex-col gap-1.5 sm:gap-2">
+                <h3 class="font-headline-card text-[17px] sm:text-headline-card font-bold text-primary">
+                  Sertifikat Praktik Kerja Lapangan
+                </h3>
+                <p class="font-body-sm text-[13px] sm:text-body-sm text-on-surface-variant">
+                  CV. Golden Mandiri
+                </p>
+              </div>
+              <div class="pt-3 border-t border-surface-container-highest flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">Tahun Terbit</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-semibold">2023</span>
+              </div>
+            </div>
+            
+            <!-- Cert 4 -->
+            <div class="p-5 sm:p-6 lg:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/60 shadow-[0_4px_20px_-2px_rgba(31,58,95,0.05)] flex flex-col justify-between gap-4 sm:gap-5 hover:shadow-lg transition-all">
+              <div class="flex items-start justify-between gap-3">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[26px]">cast_for_education</span>
+                </div>
+                <span class="px-2.5 sm:px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-code text-[11px] sm:text-label-code font-semibold">
+                  Nasional
+                </span>
+              </div>
+              <div class="flex flex-col gap-1.5 sm:gap-2">
+                <h3 class="font-headline-card text-[17px] sm:text-headline-card font-bold text-primary">
+                  Literasi Digital Nasional "Bebas Berekspresi di Dunia Digital"
+                </h3>
+                <p class="font-body-sm text-[13px] sm:text-body-sm text-on-surface-variant">
+                  Kominfo &amp; Siberkreasi
+                </p>
+              </div>
+              <div class="pt-3 border-t border-surface-container-highest flex items-center justify-between">
+                <span class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">Tahun Terbit</span>
+                <span class="font-label-code text-[12px] sm:text-label-code text-primary font-semibold">2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 8: KONTAK ==================== -->
+      <section class="w-full bg-surface-container-lowest py-14 sm:py-20 lg:py-24 scroll-mt-20 overflow-hidden" id="kontak">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop">
+          <!-- Elevated Navy Callout Container -->
+          <div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-6 sm:p-10 md:p-14 lg:p-16 shadow-[0_24px_48px_rgba(3,36,72,0.2)] flex flex-col items-center text-center gap-8 sm:gap-10 isolate">
+            <!-- Subtle background glowing accents clipped strictly inside container -->
+            <div class="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+              <div class="absolute top-0 left-0 w-48 sm:w-72 h-48 sm:h-72 rounded-full bg-secondary/15 blur-2xl sm:blur-3xl"></div>
+              <div class="absolute bottom-0 right-0 w-48 sm:w-72 h-48 sm:h-72 rounded-full bg-secondary-fixed/10 blur-2xl sm:blur-3xl"></div>
+            </div>
+            
+            <div class="relative z-10 flex flex-col items-center gap-3 sm:gap-4 max-w-2xl">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary/20 text-secondary-fixed font-label-code text-[12px] sm:text-label-code font-semibold">
+                <span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+                <span>Siap Berkolaborasi</span>
+              </div>
+              <h2 class="font-display-hero text-[28px] xs:text-display-hero-mobile lg:text-headline-section font-bold tracking-tight text-on-primary">
+                Mari Terhubung
+              </h2>
+              <p class="font-body-lead text-[15px] sm:text-body-lead text-primary-fixed-dim">
+                Terbuka untuk kesempatan magang di bidang web development dan konten digital.
+              </p>
+            </div>
+            
+            <!-- 4 Action Cards Grid -->
+            <div class="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              <!-- WhatsApp Card -->
+              <a class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm border border-outline-variant/30 hover:border-secondary hover:bg-surface-container-lowest/15 transition-all duration-200 transform hover:-translate-y-1 flex flex-col items-center text-center gap-3 group" href="https://wa.me/628993352618" rel="noopener noreferrer" target="_blank">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[22px] sm:text-[24px]">chat</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-meta text-[11px] sm:text-label-meta text-primary-fixed-dim uppercase tracking-wider font-semibold">WhatsApp</span>
+                  <span class="font-label-ui text-[14px] sm:text-label-ui text-on-primary font-semibold mt-0.5">08993352618</span>
+                </div>
+              </a>
+              
+              <!-- Email Card -->
+              <a class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm border border-outline-variant/30 hover:border-secondary hover:bg-surface-container-lowest/15 transition-all duration-200 transform hover:-translate-y-1 flex flex-col items-center text-center gap-3 group" href="mailto:ryfaathirrahman@gmail.com">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[22px] sm:text-[24px]">mail</span>
+                </div>
+                <div class="flex flex-col w-full px-1">
+                  <span class="font-label-meta text-[11px] sm:text-label-meta text-primary-fixed-dim uppercase tracking-wider font-semibold">Email</span>
+                  <span class="font-label-ui text-[12px] sm:text-[13px] md:text-label-ui text-on-primary font-semibold mt-0.5 break-all sm:break-normal">ryfaathirrahman@gmail.com</span>
+                </div>
+              </a>
+              
+              <!-- GitHub Card -->
+              <a class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm border border-outline-variant/30 hover:border-secondary hover:bg-surface-container-lowest/15 transition-all duration-200 transform hover:-translate-y-1 flex flex-col items-center text-center gap-3 group" href="https://github.com/ryfaathir345" rel="noopener noreferrer" target="_blank">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md group-hover:scale-110 transition-transform">
+                  <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-meta text-[11px] sm:text-label-meta text-primary-fixed-dim uppercase tracking-wider font-semibold">GitHub</span>
+                  <span class="font-label-ui text-[14px] sm:text-label-ui text-on-primary font-semibold mt-0.5">ryfaathir345</span>
+                </div>
+              </a>
+              
+              <!-- Location Card -->
+              <div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-sm border border-outline-variant/30 flex flex-col items-center text-center gap-3">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md">
+                  <span class="material-symbols-outlined text-[22px] sm:text-[24px]">location_on</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-meta text-[11px] sm:text-label-meta text-primary-fixed-dim uppercase tracking-wider font-semibold">Domisili</span>
+                  <span class="font-label-ui text-[14px] sm:text-label-ui text-on-primary font-semibold mt-0.5">Malang, Jawa Timur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container-highest">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-margin-tablet lg:px-margin-desktop py-8 sm:py-space-xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 sm:pb-space-lg border-b border-surface-container-high">
+        
+        <a href="#beranda" class="flex items-center gap-space-sm group">
+          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+            <span class="font-headline-sub text-headline-sub font-bold text-on-primary">RR</span>
+          </div>
+          <span class="font-headline-card text-headline-card text-primary font-bold">Ryfaathir Rahman</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+        </a>
+        
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-space-md text-[13px] sm:text-label-ui">
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#beranda">Beranda</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#tentang">Tentang</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#keterampilan">Keterampilan</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#proyek">Proyek</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#pengalaman">Pengalaman</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#pendidikan">Pendidikan</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#sertifikat">Sertifikat</a>
+          <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#kontak">Kontak</a>
+        </div>
+      </div>
+      
+      <div class="pt-4 sm:pt-space-md flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <p class="font-label-meta text-[11px] sm:text-label-meta text-on-surface-variant">© 2026 Ryfaathir Rahman. All rights reserved.</p>
+        <p class="font-label-code text-[11px] sm:text-label-code text-on-surface-variant">Informatics Engineering &amp; Web Development</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING BACK TO TOP BUTTON ==================== -->
+  <button id="back-to-top" aria-label="Kembali ke atas" class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 w-11 h-11 rounded-full bg-primary text-on-primary shadow-lg border border-primary-fixed/20 flex items-center justify-center overflow-hidden opacity-0 pointer-events-none transition-all duration-300 hover:bg-secondary hover:scale-110 active:scale-95">
+    <span class="material-symbols-outlined text-[24px] leading-none shrink-0 pointer-events-none">keyboard_arrow_up</span>
+  </button>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Toggle
+      const mobileToggleBtn = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+      if (mobileToggleBtn && mobileMenu && menuIcon) {
+        mobileToggleBtn.addEventListener('click', () => {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.textContent = 'menu';
+            mobileToggleBtn.setAttribute('aria-label', 'Buka Menu Navigasi');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.textContent = 'close';
+            mobileToggleBtn.setAttribute('aria-label', 'Tutup Menu Navigasi');
+          }
+        });
+
+        // Auto close mobile drawer on link click
+        mobileNavItems.forEach(item => {
+          item.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.textContent = 'menu';
+          });
+        });
+      }
+
+      // 2. Smooth Scrolling for all internal anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              // Update URL without hash jump
+              history.pushState(null, null, targetId);
+            }
+          }
+        });
+      });
+
+      // 3. ScrollSpy: Highlight Active Nav Item on Scroll
+      const sections = document.querySelectorAll('section[id]');
+      const desktopNavItems = document.querySelectorAll('#desktop-nav .nav-item');
+
+      const activeClasses = ['bg-secondary-container', 'text-on-secondary-container', 'font-semibold'];
+      const inactiveClasses = ['text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-low'];
+
+      function handleScrollSpy() {
+        const scrollPosition = window.scrollY + 120; // 120px offset for header
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          desktopNavItems.forEach(item => {
+            const sectionTarget = item.getAttribute('data-section');
+            if (sectionTarget === currentSectionId) {
+              item.classList.add(...activeClasses);
+              item.classList.remove(...inactiveClasses);
+            } else {
+              item.classList.remove(...activeClasses);
+              item.classList.add(...inactiveClasses);
+            }
+          });
+        }
+      }
+
+      // 4. Back To Top Button Visibility & Click
+      const backToTopBtn = document.getElementById('back-to-top');
+      function handleBackToTopVisibility() {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 350) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+      }
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // 5. Scroll Header Shadow Enhancement
+      const header = document.getElementById('main-header');
+      function handleHeaderShadow() {
+        if (!header) return;
+        if (window.scrollY > 20) {
+          header.classList.add('shadow-md');
+        } else {
+          header.classList.remove('shadow-md');
+        }
+      }
+
+      // Attach optimized scroll listener
+      window.addEventListener('scroll', () => {
+        handleScrollSpy();
+        handleBackToTopVisibility();
+        handleHeaderShadow();
+      }, { passive: true });
+
+      // Run on page load
+      handleScrollSpy();
+      handleBackToTopVisibility();
+      handleHeaderShadow();
+
+      // 6. CV Download Fallback Check
+      const cvButtons = document.querySelectorAll('a[download]');
+      cvButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          // If user hasn't put the CV file yet, alert friendly message instead of broken 404
+          fetch(btn.getAttribute('href'), { method: 'HEAD' })
+            .catch(() => {
+              // file doesn't exist, allow fallback or prompt
+              console.info('Tip: Masukkan berkas CV asli Anda di folder assets/docs/CV_Ryfaathir_Rahman.pdf');
+            });
+        });
+      });
+
+      // 7. Project Category Filter
+      const filterButtons = document.querySelectorAll('.project-filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update active button styling
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-secondary', 'text-on-secondary', 'font-semibold', 'shadow-sm');
+            b.classList.add('text-on-surface-variant', 'font-medium');
+          });
+          btn.classList.add('bg-secondary', 'text-on-secondary', 'font-semibold', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant', 'font-medium');
+
+          // Filter cards with smooth appearance
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
