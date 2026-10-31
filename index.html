@@ -105,12 +105,13 @@
 
     /* Outline text generator */
     .text-outline-giant {
-      -webkit-text-stroke: 1.5px currentColor;
+      -webkit-text-stroke: 2px rgba(17, 17, 17, 0.28);
       color: transparent;
       letter-spacing: 0.08em;
     }
     .dark .text-outline-giant {
-      -webkit-text-stroke: 1.5px rgba(245, 240, 232, 0.35);
+      -webkit-text-stroke: 2px rgba(245, 240, 232, 0.35);
+      color: transparent;
     }
 
     /* Custom Material Symbol sizing */
@@ -320,13 +321,13 @@
     <section class="relative w-full overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28 scroll-mt-20" id="beranda">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center text-center">
 
-        <!-- Small Meta Label: Year & Specialization (Positioned safely above avatar head) -->
+        <!-- Small Meta Label: Year & Specialization (High Contrast in Light & Dark Mode) -->
         <div class="relative z-20 flex items-center gap-3 mb-12 sm:mb-16 lg:mb-20">
-          <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[12px] font-bold tracking-widest uppercase shadow-sm">
+          <span class="px-3.5 py-1 rounded-full bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-code text-[12px] font-bold tracking-widest uppercase shadow-sm">
             EST. '26
           </span>
-          <span class="text-neutral-400 dark:text-neutral-600">•</span>
-          <span class="font-heading text-[12px] sm:text-[13px] tracking-wider uppercase text-neutral-600 dark:text-neutral-400 font-semibold">
+          <span class="text-neutral-400 dark:text-neutral-500 font-bold">•</span>
+          <span class="font-heading text-[12px] sm:text-[13px] tracking-wider uppercase text-neutral-800 dark:text-neutral-200 font-bold">
             Web Development &amp; Digital Content
           </span>
         </div>
@@ -405,28 +406,28 @@
                 </div>
               </div>
 
-              <!-- Pass Card (Tilted with Soft Shadow) -->
-              <div class="id-card-tilt w-full bg-white dark:bg-darksurface rounded-2xl p-6 border border-[#E5DEC9] dark:border-[#2C2824] shadow-[0_20px_35px_-8px_rgba(0,0,0,0.12)] flex flex-col items-center text-center">
+              <!-- Pass Card (Tilted with Crisp Light & Dark Mode Contrast) -->
+              <div class="id-card-tilt w-full bg-white dark:bg-darksurface rounded-2xl p-6 border border-neutral-200/90 dark:border-[#2C2824] shadow-[0_20px_35px_-8px_rgba(0,0,0,0.12)] flex flex-col items-center text-center">
 
                 <!-- Card Lanyard Hole Slot -->
                 <div class="w-12 h-2.5 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-5"></div>
 
                 <!-- Avatar Frame Inside Card -->
-                <div class="w-32 h-32 rounded-xl overflow-hidden bg-sand dark:bg-neutral-800 border-2 border-clay/30 mb-4 shadow-sm">
+                <div class="w-32 h-32 rounded-xl overflow-hidden bg-sand dark:bg-neutral-800 border-2 border-clay/40 mb-4 shadow-sm">
                   <img src="assets/images/profile.jpg" alt="Ryfaathir Rahman ID" class="w-full h-full object-cover object-[center_40%]" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23A68B6A\'/><text x=\'50\' y=\'58\' font-size=\'36\' font-weight=\'bold\' fill=\'%23FAF7F2\' text-anchor=\'middle\' font-family=\'sans-serif\'>RR</text></svg>'">
                 </div>
 
                 <h3 class="font-heading font-bold text-[18px] text-[#111111] dark:text-[#F5F0E8] uppercase tracking-tight">Ryfaathir Rahman</h3>
-                <p class="font-code text-[11px] font-semibold text-clay uppercase tracking-wider mt-0.5">S1 Teknik Informatika</p>
-                <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">Universitas Muhammadiyah Malang</p>
+                <p class="font-code text-[11px] font-bold text-clay-dark dark:text-clay-light uppercase tracking-wider mt-0.5">S1 Teknik Informatika</p>
+                <p class="font-body text-[12px] text-neutral-600 dark:text-neutral-400 font-medium mt-1">Universitas Muhammadiyah Malang</p>
 
                 <!-- Barcode & Badge Footer -->
-                <div class="w-full pt-4 mt-5 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-left">
+                <div class="w-full pt-4 mt-5 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-left">
                   <div>
-                    <span class="font-code text-[9px] uppercase tracking-widest text-neutral-400 block">ID ACCESS</span>
-                    <span class="font-code text-[11px] font-bold text-neutral-700 dark:text-neutral-300">RR-2024-UMM</span>
+                    <span class="font-code text-[10px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold block">ID ACCESS</span>
+                    <span class="font-code text-[12px] font-bold text-neutral-900 dark:text-neutral-100">RR-2024-UMM</span>
                   </div>
-                  <span class="px-2.5 py-0.5 rounded bg-clay/10 text-clay font-code text-[10px] font-bold">IPK 3.46</span>
+                  <span class="px-2.5 py-1 rounded bg-[#111111] text-[#FAF7F2] dark:bg-sand-dark dark:text-clay-light font-code text-[10px] font-bold shadow-sm">IPK 3.46</span>
                 </div>
               </div>
             </div>
@@ -586,17 +587,17 @@
 
         <!-- Header: Outlined Giant Text + Floating Numbers -->
         <div class="relative py-6 sm:py-10 flex flex-col items-center justify-center select-none text-center">
-          <!-- Floating Accent Numbers 01 - 06 -->
-          <span class="absolute left-4 top-0 font-display text-[26px] sm:text-[40px] text-sand dark:text-sand-dark pointer-events-none transform -rotate-12">01</span>
-          <span class="absolute right-12 top-2 font-display text-[24px] sm:text-[36px] text-sand dark:text-sand-dark pointer-events-none transform rotate-12">03</span>
-          <span class="absolute left-1/4 bottom-0 font-display text-[28px] sm:text-[44px] text-sand dark:text-sand-dark pointer-events-none transform -rotate-6">05</span>
-          <span class="absolute right-1/4 bottom-2 font-display text-[24px] sm:text-[38px] text-sand dark:text-sand-dark pointer-events-none transform rotate-6">06</span>
+          <!-- Floating Accent Numbers 01 - 06 (Crisp & Visible in both Light and Dark mode) -->
+          <span class="absolute left-4 top-0 font-display text-[26px] sm:text-[40px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform -rotate-12 font-bold select-none">01</span>
+          <span class="absolute right-12 top-2 font-display text-[24px] sm:text-[36px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform rotate-12 font-bold select-none">03</span>
+          <span class="absolute left-1/4 bottom-0 font-display text-[28px] sm:text-[44px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform -rotate-6 font-bold select-none">05</span>
+          <span class="absolute right-1/4 bottom-2 font-display text-[24px] sm:text-[38px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform rotate-6 font-bold select-none">06</span>
 
           <!-- Giant Stroke Title -->
           <h2 class="text-outline-giant font-display text-[44px] xs:text-[60px] sm:text-[88px] lg:text-[116px] leading-none uppercase">
             PROYEK
           </h2>
-          <p class="font-heading text-[13px] sm:text-[14px] uppercase tracking-widest text-clay font-bold -mt-2 sm:-mt-4 z-10">
+          <p class="font-heading text-[13px] sm:text-[14px] uppercase tracking-widest text-clay-dark dark:text-clay-light font-extrabold -mt-2 sm:-mt-4 z-10">
             Portofolio Karya &amp; Rekayasa
           </p>
         </div>
@@ -899,7 +900,7 @@
               <h3 class="font-heading font-bold text-[15px] leading-snug">Sertifikat Kompetensi Rekayasa Perangkat Lunak</h3>
               <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">SMKN 11 Malang &amp; PT WeSolve Solusi Indonesia</p>
             </div>
-            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Kompeten</span>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-clay/15 dark:bg-sand-dark text-clay-dark dark:text-clay-light font-code text-[11px] font-bold w-fit uppercase">Kompeten</span>
           </div>
 
           <!-- Cert 2 -->
@@ -909,7 +910,7 @@
               <h3 class="font-heading font-bold text-[15px] leading-snug">Pelatihan Pembentukan Kepribadian &amp; Kepemimpinan</h3>
               <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">P2KK Universitas Muhammadiyah Malang</p>
             </div>
-            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Lulus</span>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-clay/15 dark:bg-sand-dark text-clay-dark dark:text-clay-light font-code text-[11px] font-bold w-fit uppercase">Lulus</span>
           </div>
 
           <!-- Cert 3 -->
@@ -919,7 +920,7 @@
               <h3 class="font-heading font-bold text-[15px] leading-snug">Sertifikat Praktik Kerja Lapangan (PKL)</h3>
               <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">CV. Golden Mandiri, Malang</p>
             </div>
-            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Terverifikasi</span>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-clay/15 dark:bg-sand-dark text-clay-dark dark:text-clay-light font-code text-[11px] font-bold w-fit uppercase">Terverifikasi</span>
           </div>
 
           <!-- Cert 4 -->
@@ -929,7 +930,7 @@
               <h3 class="font-heading font-bold text-[15px] leading-snug">Literasi Digital Nasional "Bebas Berekspresi"</h3>
               <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">Kementerian Kominfo &amp; Siberkreasi</p>
             </div>
-            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Nasional</span>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-clay/15 dark:bg-sand-dark text-clay-dark dark:text-clay-light font-code text-[11px] font-bold w-fit uppercase">Nasional</span>
           </div>
 
         </div>

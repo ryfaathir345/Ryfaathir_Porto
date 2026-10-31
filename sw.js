@@ -1,5 +1,5 @@
 // Service Worker - Cache-First for static assets, Network-First for HTML
-const CACHE_NAME = 'portfolio-v2';
+const CACHE_NAME = 'portfolio-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
