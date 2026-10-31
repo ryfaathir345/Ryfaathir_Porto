@@ -1,0 +1,17 @@
+{
+  "name": "Ryfaathir Rahman - Portfolio",
+  "short_name": "Ryfaathir",
+  "description": "Portofolio Ryfaathir Rahman - Web Development & Digital Content",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcf9f8",
+  "theme_color": "#032448",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -46,7 +46,8 @@ PortoFolio/
 │
 └── assets/                     # Folder berkas statis
     ├── images/                 # Foto profil dan aset gambar proyek
-    │   ├── profile.jpg         # Pasfoto profil Ryfaathir Rahman
+    │   ├── kartun.jpg          # Ilustrasi cutout Ryfaathir Rahman (Hero Banner)
+    │   ├── profile.jpg         # Pasfoto profil Ryfaathir Rahman (ID Card Lanyard)
     │   ├── shadownclip-preview.png  # Preview UI face tracking ShadownClip
     │   ├── shadownclip-icon.png     # Logo ShadownClip
     │   ├── horti-apps-preview.png   # Preview visual marketplace Horti-Apps

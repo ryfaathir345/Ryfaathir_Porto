@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Ryfaathir Rahman | Portofolio Web & Digital Content</title>
+  <meta name="description" content="Portofolio Ryfaathir Rahman - Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang dengan keahlian Web Development & Digital Content.">
+  <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F0F0F" media="(prefers-color-scheme: dark)">
+
+  <!-- ==================== PRECONNECT & DNS-PREFETCH ==================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+  <!-- ==================== FAVICON & MANIFEST ==================== -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- ==================== OPEN GRAPH & TWITTER ==================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ryfaathir345.github.io/">
+  <meta property="og:title" content="Ryfaathir Rahman | Portofolio Web & Digital Content">
+  <meta property="og:description" content="Mahasiswa Teknik Informatika UMM | Full-Stack Developer, AI & Automation, Mobile & Desktop Apps. IPK 3.46.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ryfaathir Rahman | Portofolio Web & Digital Content">
+  <meta name="twitter:description" content="Mahasiswa Teknik Informatika UMM | Full-Stack Developer, AI & Automation, Mobile & Desktop Apps.">
+  <meta name="twitter:image" content="assets/images/profile.jpg">
+
+  <!-- ==================== JSON-LD SCHEMA.ORG ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ryfaathir345.github.io/#website",
+        "url": "https://ryfaathir345.github.io/",
+        "name": "Ryfaathir Rahman Portfolio",
+        "publisher": { "@id": "https://ryfaathir345.github.io/#person" },
+        "inLanguage": "id-ID"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ryfaathir345.github.io/#person",
+        "name": "Ryfaathir Rahman",
+        "url": "https://ryfaathir345.github.io/",
+        "image": "assets/images/profile.jpg",
+        "jobTitle": "Mahasiswa Teknik Informatika / Web Developer",
+        "worksFor": { "@type": "Organization", "name": "Universitas Muhammadiyah Malang" },
+        "knowsAbout": ["Web Development", "Full-Stack Development", "AI & Automation", "Flutter Mobile", "C# .NET"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==================== GOOGLE FONTS ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <!-- ==================== BASE STYLES & CSS VARIABLES ==================== -->
+  <style>
+    :root {
+      --bg-primary: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --text-main: #111111;
+      --text-muted: #66635F;
+      --accent-clay: #A68B6A;
+      --accent-sand: #E8DCCB;
+      --border-subtle: #E5DEC9;
+      --line-divider: rgba(17, 17, 17, 0.12);
+    }
+
+    .dark {
+      --bg-primary: #0F0F0F;
+      --bg-card: #181818;
+      --text-main: #F5F0E8;
+      --text-muted: #A39E95;
+      --accent-clay: #C2A584;
+      --accent-sand: #2A2621;
+      --border-subtle: #2C2824;
+      --line-divider: rgba(245, 240, 232, 0.12);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      overflow-x: hidden;
+      width: 100%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Outline text generator */
+    .text-outline-giant {
+      -webkit-text-stroke: 1.5px currentColor;
+      color: transparent;
+      letter-spacing: 0.08em;
+    }
+    .dark .text-outline-giant {
+      -webkit-text-stroke: 1.5px rgba(245, 240, 232, 0.35);
+    }
+
+    /* Custom Material Symbol sizing */
+    .material-symbols-outlined {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2em;
+      height: 1.2em;
+      overflow: hidden;
+      vertical-align: middle;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-clay);
+      border-radius: 4px;
+    }
+
+    /* Lanyard ID Card Hover Effect */
+    .id-card-tilt {
+      transform: rotate(-4deg);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+      transform-origin: top center;
+    }
+    .id-card-tilt:hover {
+      transform: rotate(-1deg) translateY(-6px);
+      box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Project Columns Desktop Flex Growth */
+    @media (min-width: 1024px) {
+      .project-strip {
+        transition: flex 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .project-strip:hover {
+        flex: 1.45;
+      }
+    }
+
+    /* Focus visible */
+    :focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 3px;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      #main-header, #mobile-menu, #back-to-top, #project-filters, #btn-download-cv, #theme-toggle, #mobile-menu-toggle, #toast {
+        display: none !important;
+      }
+      body, main, section {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .project-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        background: #fafafa !important;
+        color: #000 !important;
+      }
+    }
+
+    /* Prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Prevent dark mode flash -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            clay: {
+              DEFAULT: "#A68B6A",
+              dark: "#8C7150",
+              light: "#C5AD8F",
+            },
+            sand: {
+              DEFAULT: "#E8DCCB",
+              muted: "#F0E7DA",
+              dark: "#2A251E",
+            },
+            offwhite: "#FAF7F2",
+            darkbg: "#0F0F0F",
+            darksurface: "#181818",
+            /* 6 Project Solid Accents */
+            proj1: "#4F6FD1", /* Royal Blue */
+            proj2: "#D4CBB8", /* Warm Cream Sand */
+            proj3: "#6C8B58", /* Sage Herb */
+            proj4: "#E05353", /* Coral Terracotta */
+            proj5: "#758CD8", /* Soft Periwinkle */
+            proj6: "#C28352", /* Warm Terracotta */
+          },
+          fontFamily: {
+            display: ["'Archivo Black'", "sans-serif"],
+            heading: ["'Poppins'", "sans-serif"],
+            body: ["'Poppins'", "sans-serif"],
+            code: ["'Space Grotesk'", "monospace"],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="font-body text-[#111111] dark:text-[#F5F0E8] bg-[#FAF7F2] dark:bg-[#0F0F0F] selection:bg-clay/20 selection:text-clay-dark w-full max-w-full overflow-x-hidden relative">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/90 dark:bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#E5DEC9]/60 dark:border-[#2C2824] transition-all duration-300">
+    <div class="h-16 sm:h-20 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#beranda" class="flex items-center gap-2 group shrink-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] flex items-center justify-center font-display text-[15px] group-hover:scale-105 transition-transform">
+          RR
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="font-heading font-bold text-[14px] sm:text-[16px] tracking-tight uppercase">Ryfaathir</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block"></span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu (Minimalist Uppercase + Underline Indicator) -->
+      <nav id="desktop-nav" class="hidden xl:flex items-center gap-6 2xl:gap-8">
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-semibold text-clay transition-colors pb-1 border-b-2 border-clay" data-section="beranda" href="#beranda">Beranda</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="tentang" href="#tentang">Tentang</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="keterampilan" href="#keterampilan">Keterampilan</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="proyek" href="#proyek">Proyek</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="pengalaman" href="#pengalaman">Pengalaman</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="pendidikan" href="#pendidikan">Pendidikan</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="sertifikat" href="#sertifikat">Sertifikat</a>
+        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="kontak" href="#kontak">Kontak</a>
+      </nav>
+
+      <!-- Action Buttons & Theme Toggle -->
+      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <!-- Download CV Pill -->
+        <a id="btn-download-cv" class="hidden md:inline-flex items-center gap-1.5 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading font-semibold text-[12px] uppercase tracking-wider rounded-full px-5 py-2.5 hover:bg-clay dark:hover:bg-clay dark:hover:text-white transition-all shadow-sm active:scale-95" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          <span>Unduh CV</span>
+        </a>
+
+        <!-- Dark/Light Mode Toggle Button -->
+        <button id="theme-toggle" aria-label="Ganti Tema Gelap/Terang" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E5DEC9] dark:border-[#2C2824] hover:border-clay flex items-center justify-center text-neutral-700 dark:text-neutral-300 transition-colors shrink-0" type="button">
+          <span id="theme-icon" class="material-symbols-outlined text-[19px]">dark_mode</span>
+        </button>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E5DEC9] dark:border-[#2C2824] flex items-center justify-center text-neutral-800 dark:text-neutral-200 transition-colors shrink-0" type="button">
+          <span id="menu-icon" class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-[#FAF7F2] dark:bg-[#0F0F0F] border-b border-[#E5DEC9] dark:border-[#2C2824] shadow-xl transition-all duration-300 px-6 py-6">
+      <div class="max-w-[400px] mx-auto flex flex-col gap-2">
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider font-semibold text-clay" href="#beranda">Beranda</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#tentang">Tentang</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#keterampilan">Keterampilan</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#proyek">Proyek</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#pengalaman">Pengalaman</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#pendidikan">Pendidikan</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#sertifikat">Sertifikat</a>
+        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#kontak">Kontak</a>
+        <div class="pt-3 border-t border-[#E5DEC9] dark:border-[#2C2824] mt-2">
+          <a class="w-full inline-flex items-center justify-center gap-2 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading text-[12px] font-semibold uppercase tracking-wider rounded-full py-3" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
+            <span class="material-symbols-outlined text-[16px]">download</span>
+            <span>Unduh Berkas CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="w-full max-w-full overflow-x-hidden pt-16 sm:pt-20">
+
+    <!-- ==================== SECTION 1: HERO (BERANDA) ==================== -->
+    <section class="relative w-full overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28 scroll-mt-20" id="beranda">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center text-center">
+        
+        <!-- Small Meta Label: Year & Specialization -->
+        <div class="flex items-center gap-3 mb-4 sm:mb-6">
+          <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[12px] font-bold tracking-widest uppercase">
+            EST. '26
+          </span>
+          <span class="text-neutral-400 dark:text-neutral-600">•</span>
+          <span class="font-heading text-[12px] sm:text-[13px] tracking-wider uppercase text-neutral-600 dark:text-neutral-400 font-semibold">
+            Web Development &amp; Digital Content
+          </span>
+        </div>
+
+        <!-- GIANT PLAYFUL "PORTFOLIO" TITLE WITH OVERLAPPING PROFILE -->
+        <div class="relative w-full max-w-5xl my-4 sm:my-8 flex items-center justify-center select-none">
+          <!-- Big Letters Container with Staggered Jitter Rotations -->
+          <h1 class="font-display leading-none text-black dark:text-[#F5F0E8] tracking-tighter flex items-center justify-center flex-wrap break-all pointer-events-none" style="font-size: clamp(3.6rem, 13.5vw, 11.5rem);">
+            <span class="inline-block transform -rotate-6 -translate-y-2">P</span>
+            <span class="inline-block transform rotate-3 translate-y-1">O</span>
+            <span class="inline-block transform -rotate-3 -translate-y-1">R</span>
+            <span class="inline-block transform rotate-6 translate-y-2">T</span>
+            <span class="inline-block transform -rotate-2 -translate-y-2 text-clay">F</span>
+            <span class="inline-block transform rotate-4 translate-y-1">O</span>
+            <span class="inline-block transform -rotate-6 -translate-y-1">L</span>
+            <span class="inline-block transform rotate-3 translate-y-2">I</span>
+            <span class="inline-block transform -rotate-4 -translate-y-2">O</span>
+          </h1>
+
+          <!-- Overlapping Center Avatar (Menimpa Sebagian Huruf) -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-auto">
+            <div class="relative w-28 h-28 xs:w-36 xs:h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#FAF7F2] dark:border-[#0F0F0F] shadow-2xl z-10 group bg-sand dark:bg-neutral-800">
+              <!-- Placeholder foto profil transparan / default profile -->
+              <img id="user-avatar-img" src="assets/images/profile.jpg" alt="Ryfaathir Rahman" class="w-full h-full object-cover object-[center_40%] group-hover:scale-105 transition-transform duration-500" fetchpriority="high" decoding="async" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23A68B6A\'/><text x=\'50\' y=\'58\' font-size=\'36\' font-weight=\'bold\' fill=\'%23FAF7F2\' text-anchor=\'middle\' font-family=\'sans-serif\'>RR</text></svg>'">
+            </div>
+          </div>
+        </div>
+
+        <!-- Name & Lead Bio -->
+        <div class="mt-8 sm:mt-12 max-w-2xl flex flex-col items-center gap-3">
+          <p class="font-heading font-bold text-[18px] sm:text-[22px] tracking-tight">
+            Ryfaathir Rahman
+            <span class="text-clay"> — Mahasiswa Teknik Informatika</span>
+          </p>
+          <p class="font-body text-[14px] sm:text-[16px] text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
+            Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang dengan fondasi rekayasa perangkat lunak, pengembangan web interaktif, dan produksi konten visual.
+          </p>
+        </div>
+
+        <!-- Pill CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <a class="inline-flex items-center gap-2 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading font-semibold text-[13px] uppercase tracking-wider rounded-full px-7 py-3 hover:bg-clay dark:hover:bg-clay dark:hover:text-white transition-all shadow-md active:scale-95" href="#proyek">
+            <span>Lihat Proyek</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+          </a>
+          <a class="inline-flex items-center gap-2 bg-transparent text-[#111111] dark:text-[#F5F0E8] font-heading font-semibold text-[13px] uppercase tracking-wider rounded-full px-6 py-3 border border-[#111111]/30 dark:border-white/30 hover:border-clay hover:text-clay transition-all" href="#kontak">
+            <span>Hubungi Saya</span>
+            <span class="material-symbols-outlined text-[18px]">send</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: TENTANG SAYA (2 KOLOM + ID CARD LANYARD) ==================== -->
+    <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20" id="tentang">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: ID-CARD WITH LANYARD STRAP -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-[310px] flex flex-col items-center">
+              
+              <!-- SVG Lanyard Strap & Metal Clip Hook -->
+              <div class="relative z-20 flex flex-col items-center -mb-3 pointer-events-none">
+                <!-- Fabric Strap -->
+                <div class="w-10 h-16 bg-neutral-800 dark:bg-neutral-700 rounded-t-sm shadow-md flex items-center justify-center relative overflow-hidden">
+                  <div class="w-1.5 h-full bg-clay opacity-80"></div>
+                </div>
+                <!-- Metal Lobster Clip -->
+                <div class="w-6 h-5 rounded-b-md bg-neutral-400 border border-neutral-500 shadow-sm flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full border border-neutral-600 bg-neutral-300"></div>
+                </div>
+              </div>
+
+              <!-- Pass Card (Tilted with Soft Shadow) -->
+              <div class="id-card-tilt w-full bg-white dark:bg-darksurface rounded-2xl p-6 border border-[#E5DEC9] dark:border-[#2C2824] shadow-[0_20px_35px_-8px_rgba(0,0,0,0.12)] flex flex-col items-center text-center">
+                
+                <!-- Card Lanyard Hole Slot -->
+                <div class="w-12 h-2.5 bg-neutral-200 dark:bg-neutral-700 rounded-full mb-5"></div>
+
+                <!-- Avatar Frame Inside Card -->
+                <div class="w-32 h-32 rounded-xl overflow-hidden bg-sand dark:bg-neutral-800 border-2 border-clay/30 mb-4 shadow-sm">
+                  <img src="assets/images/profile.jpg" alt="Ryfaathir Rahman ID" class="w-full h-full object-cover object-[center_40%]" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23A68B6A\'/><text x=\'50\' y=\'58\' font-size=\'36\' font-weight=\'bold\' fill=\'%23FAF7F2\' text-anchor=\'middle\' font-family=\'sans-serif\'>RR</text></svg>'">
+                </div>
+
+                <h3 class="font-heading font-bold text-[18px] text-[#111111] dark:text-[#F5F0E8] uppercase tracking-tight">Ryfaathir Rahman</h3>
+                <p class="font-code text-[11px] font-semibold text-clay uppercase tracking-wider mt-0.5">S1 Teknik Informatika</p>
+                <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">Universitas Muhammadiyah Malang</p>
+
+                <!-- Barcode & Badge Footer -->
+                <div class="w-full pt-4 mt-5 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-left">
+                  <div>
+                    <span class="font-code text-[9px] uppercase tracking-widest text-neutral-400 block">ID ACCESS</span>
+                    <span class="font-code text-[11px] font-bold text-neutral-700 dark:text-neutral-300">RR-2024-UMM</span>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded bg-clay/10 text-clay font-code text-[10px] font-bold">IPK 3.46</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Intro -->
+          <div class="lg:col-span-7 flex flex-col gap-6">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-[2px] bg-clay"></span>
+              <span class="font-heading font-bold text-[12px] uppercase tracking-widest text-clay">Tentang Saya</span>
+            </div>
+
+            <h2 class="font-heading font-bold text-[28px] sm:text-[38px] leading-tight tracking-tight text-[#111111] dark:text-[#F5F0E8]">
+              Halo, saya <span class="text-clay">Ryfaathir Rahman</span>. Pengembang web yang menyatukan logika sistem dan estetika konten digital.
+            </h2>
+
+            <div class="space-y-4 font-body text-[15px] sm:text-[16px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              <p>
+                Mahasiswa Teknik Informatika Universitas Muhammadiyah Malang yang memiliki dasar kuat di bidang rekayasa perangkat lunak dan pengembangan website, serta pengalaman di bidang desain pemasaran dan produksi konten visual melalui Praktik Kerja Lapangan.
+              </p>
+              <p>
+                Berpengalaman memimpin dan mendampingi kelompok mahasiswa dalam kegiatan kampus. Terbiasa bekerja dalam tim, berkomunikasi dengan baik, dan bertanggung jawab. Siap belajar dan berkontribusi di lingkungan profesional melalui program magang.
+              </p>
+            </div>
+
+            <!-- 3 Mini Metric Badges -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-[#E5DEC9] dark:border-[#2C2824]">
+              <div>
+                <span class="font-display text-[26px] sm:text-[34px] text-clay block leading-none">3.46</span>
+                <span class="font-code text-[11px] uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold mt-1 block">IPK Mahasiswa</span>
+              </div>
+              <div>
+                <span class="font-display text-[26px] sm:text-[34px] text-clay block leading-none">6+</span>
+                <span class="font-code text-[11px] uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold mt-1 block">Proyek Pilihan</span>
+              </div>
+              <div>
+                <span class="font-display text-[26px] sm:text-[34px] text-clay block leading-none">30+</span>
+                <span class="font-code text-[11px] uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold mt-1 block">Maba Didampingi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: EDITORIAL 3-KOLOM (KETERAMPILAN | PENGALAMAN | PENDIDIKAN) ==================== -->
+    <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20" id="keterampilan">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0 lg:divide-x lg:divide-[#E5DEC9] dark:lg:divide-[#2C2824]">
+          
+          <!-- KOLOM 1: KETERAMPILAN (SKILLS) -->
+          <div class="lg:pr-10 flex flex-col gap-6">
+            <div>
+              <span class="font-code text-[11px] tracking-widest uppercase text-clay font-bold block mb-1">01 / KEAHLIAN</span>
+              <h3 class="font-display text-[22px] sm:text-[24px] uppercase tracking-tight">Keterampilan</h3>
+            </div>
+            
+            <!-- Technical Hard Skills -->
+            <div class="flex flex-col gap-3">
+              <span class="font-heading text-[12px] uppercase tracking-wider font-bold text-neutral-400">Hard Skills &amp; Stack</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Full-Stack Web</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Next.js 14 &amp; TypeScript</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Midtrans Gateway</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Laravel &amp; PHP 8</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Flutter Mobile</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">C# .NET 8 (WPF)</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">FastAPI &amp; Whisper AI</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">MySQL &amp; SQLite</span>
+                <span class="px-3 py-1.5 rounded-full bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] font-code text-[12px] font-semibold text-neutral-800 dark:text-neutral-200">Desain &amp; Editing Video</span>
+              </div>
+            </div>
+
+            <!-- Soft Skills & Bahasa -->
+            <div class="flex flex-col gap-3 pt-4 border-t border-[#E5DEC9] dark:border-[#2C2824]">
+              <span class="font-heading text-[12px] uppercase tracking-wider font-bold text-neutral-400">Interpersonal &amp; Bahasa</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-heading text-[11px] font-semibold uppercase">Kepemimpinan</span>
+                <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-heading text-[11px] font-semibold uppercase">Komunikasi Tim</span>
+                <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-heading text-[11px] font-semibold uppercase">Problem Solving</span>
+                <span class="px-3 py-1 rounded-full bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-heading text-[11px] font-semibold uppercase">Bahasa Indonesia (Native)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- KOLOM 2: PENGALAMAN (EXPERIENCE) -->
+          <div class="lg:px-10 flex flex-col gap-6 scroll-mt-20" id="pengalaman">
+            <div>
+              <span class="font-code text-[11px] tracking-widest uppercase text-clay font-bold block mb-1">02 / RIWAYAT</span>
+              <h3 class="font-display text-[22px] sm:text-[24px] uppercase tracking-tight">Pengalaman</h3>
+            </div>
+
+            <!-- Item 1: PKL -->
+            <div class="flex flex-col gap-2 pb-6 border-b border-[#E5DEC9] dark:border-[#2C2824]">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-heading font-bold text-[15px] text-[#111111] dark:text-[#F5F0E8]">Siswa PKL (Bidang RPL)</h4>
+                <span class="font-code text-[11px] text-clay font-bold">2023</span>
+              </div>
+              <p class="font-heading text-[13px] text-clay font-medium">CV. Golden Mandiri, Malang</p>
+              <ul class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 space-y-1 mt-1 list-disc list-inside">
+                <li>Membuat materi promosi produk perusahaan</li>
+                <li>Memproduksi &amp; editing video produk komersial</li>
+                <li>Mendapatkan predikat penilaian "Baik"</li>
+              </ul>
+            </div>
+
+            <!-- Item 2: LO Ospek -->
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-heading font-bold text-[15px] text-[#111111] dark:text-[#F5F0E8]">Liaison Officer (LO)</h4>
+                <span class="font-code text-[11px] text-clay font-bold">2026</span>
+              </div>
+              <p class="font-heading text-[13px] text-clay font-medium">Ospek Prodi Teknik Informatika UMM</p>
+              <ul class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 space-y-1 mt-1 list-disc list-inside">
+                <li>Mendampingi &amp; mengarahkan 30 mahasiswa baru</li>
+                <li>Jembatan komunikasi antara panitia &amp; peserta</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- KOLOM 3: PENDIDIKAN (EDUCATION) -->
+          <div class="lg:pl-10 flex flex-col gap-6 scroll-mt-20" id="pendidikan">
+            <div>
+              <span class="font-code text-[11px] tracking-widest uppercase text-clay font-bold block mb-1">03 / AKADEMIK</span>
+              <h3 class="font-display text-[22px] sm:text-[24px] uppercase tracking-tight">Pendidikan</h3>
+            </div>
+
+            <!-- Edu 1: UMM -->
+            <div class="p-4 rounded-xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col gap-2">
+              <div class="flex items-center justify-between">
+                <span class="font-code text-[11px] font-bold text-clay uppercase">2024 – Sekarang</span>
+                <span class="px-2 py-0.5 rounded bg-clay/10 text-clay font-code text-[11px] font-bold">IPK 3.46</span>
+              </div>
+              <h4 class="font-heading font-bold text-[15px] text-[#111111] dark:text-[#F5F0E8]">Universitas Muhammadiyah Malang</h4>
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400">S1 Teknik Informatika</p>
+            </div>
+
+            <!-- Edu 2: SMKN 11 -->
+            <div class="p-4 rounded-xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col gap-2">
+              <div class="flex items-center justify-between">
+                <span class="font-code text-[11px] font-bold text-neutral-500 uppercase">2021 – 2024</span>
+                <span class="px-2 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-code text-[11px] font-bold">Lulus</span>
+              </div>
+              <h4 class="font-heading font-bold text-[15px] text-[#111111] dark:text-[#F5F0E8]">SMK Negeri 11 Malang</h4>
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400">Rekayasa Perangkat Lunak (RPL)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: DAFTAR PROYEK (OUTLINE RAKSASA + 6 KOLOM SOLID) ==================== -->
+    <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20 overflow-hidden" id="proyek">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        
+        <!-- Header: Outlined Giant Text + Floating Numbers -->
+        <div class="relative py-6 sm:py-10 flex flex-col items-center justify-center select-none text-center">
+          <!-- Floating Accent Numbers 01 - 06 -->
+          <span class="absolute left-4 top-0 font-display text-[26px] sm:text-[40px] text-sand dark:text-sand-dark pointer-events-none transform -rotate-12">01</span>
+          <span class="absolute right-12 top-2 font-display text-[24px] sm:text-[36px] text-sand dark:text-sand-dark pointer-events-none transform rotate-12">03</span>
+          <span class="absolute left-1/4 bottom-0 font-display text-[28px] sm:text-[44px] text-sand dark:text-sand-dark pointer-events-none transform -rotate-6">05</span>
+          <span class="absolute right-1/4 bottom-2 font-display text-[24px] sm:text-[38px] text-sand dark:text-sand-dark pointer-events-none transform rotate-6">06</span>
+
+          <!-- Giant Stroke Title -->
+          <h2 class="text-outline-giant font-display text-[44px] xs:text-[60px] sm:text-[88px] lg:text-[116px] leading-none uppercase">
+            PROYEK
+          </h2>
+          <p class="font-heading text-[13px] sm:text-[14px] uppercase tracking-widest text-clay font-bold -mt-2 sm:-mt-4 z-10">
+            Portofolio Karya &amp; Rekayasa
+          </p>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 my-8" id="project-filters">
+          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-semibold bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] transition-all" data-filter="all">Semua (6)</button>
+          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="web">Web &amp; Fullstack (3)</button>
+          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="ai">AI &amp; SaaS (1)</button>
+          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="mobile">Mobile App (1)</button>
+          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="desktop">Desktop (1)</button>
+        </div>
+
+        <!-- 6 PROJECT CARDS: Solid Colorful Vertical Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch" id="projects-container">
+          
+          <!-- PROYEK 1: CreatorVault (Solid Color: #4F6FD1 Royal Blue) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#4F6FD1] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+            <div class="flex flex-col gap-4">
+              <!-- Top Header: Category Tag & Huge Number -->
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm font-code text-[11px] font-bold uppercase tracking-wider">
+                  Web &bull; E-Commerce
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">01</span>
+              </div>
+
+              <!-- Project Title & Subtitle -->
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">CreatorVault</h3>
+                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Platform E-Commerce Produk Digital &amp; Payment Gateway Otomatis</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+                Platform etalase dan transaksi produk digital modern bertenaga Next.js 14 App Router. Dilengkapi integrasi Midtrans Snap (QRIS &amp; Virtual Account), verifikasi otomatis Webhook Listener SHA-512 anti-fraud, serta link download token 256-bit berbatas waktu 24 jam.
+              </p>
+
+              <!-- Mockup Preview Mini Box -->
+              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex flex-col gap-2 font-code text-[11px]">
+                <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>creatorvault.store</span>
+                  <span class="text-emerald-300 font-bold">QRIS Instant</span>
+                </div>
+                <div class="flex justify-between items-center text-white/80">
+                  <span>SaaS Starter Kit</span>
+                  <span class="font-bold text-white">Rp 149.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Stack & GitHub Link -->
+            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
+                <span class="px-2 py-0.5 rounded bg-white/15">Next.js 14</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">TypeScript</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Midtrans SDK</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Prisma</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-white text-[#4F6FD1] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROYEK 2: ShadownClip V3 (Solid Color: #D4CBB8 Warm Cream) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-neutral-900 bg-[#D4CBB8] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="ai">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-black/10 font-code text-[11px] font-bold uppercase tracking-wider text-neutral-800">
+                  AI &bull; SaaS Platform
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-black/50 select-none">02</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-neutral-900">ShadownClip V3</h3>
+                <p class="font-heading text-[13px] text-neutral-700 font-semibold mt-1">Automated YouTube to 9:16 Shorts AI Pipeline &amp; VIP SaaS</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-neutral-800 leading-relaxed">
+                Platform web bertenaga AI dengan model bisnis SaaS freemium yang mengotomatisasi pengubahan video panjang YouTube menjadi klip vertikal format 9:16 (Shorts, TikTok, Reels). Dilengkapi Payment Midtrans VIP, Whisper subtitle dinamis, dan Gemini Flash.
+              </p>
+
+              <!-- Image / Mockup Preview -->
+              <div class="rounded-xl overflow-hidden bg-black/10 border border-black/10 h-32 flex items-center justify-center relative">
+                <img src="assets/images/shadownclip-preview.png" alt="ShadownClip Preview" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hidden flex-col items-center justify-center text-neutral-700">
+                  <span class="material-symbols-outlined text-[32px]">movie_filter</span>
+                  <span class="font-code text-[11px] font-bold">9:16 Video Clipper</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-black/15 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-neutral-800">
+                <span class="px-2 py-0.5 rounded bg-black/10">FastAPI</span>
+                <span class="px-2 py-0.5 rounded bg-black/10">Whisper AI</span>
+                <span class="px-2 py-0.5 rounded bg-black/10">Gemini Flash</span>
+                <span class="px-2 py-0.5 rounded bg-black/10">Celery + Redis</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-neutral-900 text-white font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-800 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROYEK 3: Horti-Apps (Solid Color: #6C8B58 Sage Green) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#6C8B58] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
+                  Web &bull; Marketplace
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">03</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">Horti-Apps</h3>
+                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Platform Marketplace Pertanian Terintegrasi WhatsApp API</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+                Platform web marketplace agrikultur modern berbasis arsitektur Laravel yang menghubungkan Petani lokal dengan Pengepul. Dasbor terspesialisasi untuk 3 peran (Petani, Pengepul, Admin), verifikasi KYC, dan transaksi langsung via WhatsApp API.
+              </p>
+
+              <!-- Image / Mockup Preview -->
+              <div class="rounded-xl overflow-hidden bg-black/20 border border-white/15 h-32 flex items-center justify-center relative">
+                <img src="assets/images/horti-apps-preview.png" alt="Horti-Apps Preview" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hidden flex-col items-center justify-center text-white">
+                  <span class="material-symbols-outlined text-[32px]">storefront</span>
+                  <span class="font-code text-[11px] font-bold">Horti Market Live</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
+                <span class="px-2 py-0.5 rounded bg-white/15">PHP 8.2</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Laravel</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">MySQL</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">WhatsApp API</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-white text-[#6C8B58] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROYEK 4: LifeHub V2 (Solid Color: #E05353 Coral Red) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#E05353] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="mobile">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
+                  Mobile App &bull; Flutter
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">04</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">LifeHub V2</h3>
+                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Personal Life Management &amp; Productivity App</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+                Aplikasi mobile produktivitas pintar berbasis Flutter: Pelacak Keuangan (FL Chart), Brankas Password Terenkripsi (AES-256 &amp; Biometric), Jurnal Trading Multi-Market, serta Jadwal Kuliah. Berjalan 100% offline dengan Drift SQLite lokal.
+              </p>
+
+              <!-- Mockup Preview Box -->
+              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center gap-3">
+                <img src="assets/images/lifehub-icon.png" alt="LifeHub Icon" class="w-10 h-10 rounded-xl bg-white/10 shrink-0" loading="lazy" decoding="async" onerror="this.style.display='none';">
+                <div class="flex flex-col font-code text-[11px]">
+                  <span class="font-bold">LifeHub Offline Vault</span>
+                  <span class="text-white/70">Drift SQLite &bull; Biometric</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
+                <span class="px-2 py-0.5 rounded bg-white/15">Flutter</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Dart</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Drift SQLite</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">Biometric</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-white text-[#E05353] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROYEK 5: RNM TWEAK (Solid Color: #758CD8 Soft Periwinkle) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#758CD8] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="desktop">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
+                  Desktop &bull; Windows
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">05</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">RNM TWEAK</h3>
+                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Windows Optimization &amp; System Utility</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+                Aplikasi desktop Windows utilitas performa tinggi dibangun dengan C# .NET 8 dan Windows 11 Fluent UI (Wpf.Ui). Pemantauan telemetri hardware real-time (CPU, GPU, RAM), Game Booster 1-klik, dan 50+ konfigurasi tweak sistem.
+              </p>
+
+              <!-- Mockup Preview Box -->
+              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center justify-between font-code text-[11px]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span>1-Click Booster</span>
+                </div>
+                <span class="font-bold text-white">50+ Tweaks</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
+                <span class="px-2 py-0.5 rounded bg-white/15">C# 12</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">.NET 8 LTS</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">WPF Fluent</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">WinAPI</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-white text-[#758CD8] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- PROYEK 6: Website Galeri Foto (Solid Color: #C28352 Warm Terracotta) -->
+          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#C28352] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
+                  Web &bull; UKOM RPL
+                </span>
+                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">06</span>
+              </div>
+
+              <div>
+                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">Website Galeri Foto</h3>
+                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Sistem Manajemen &amp; Kurasi Arsip Visual</p>
+              </div>
+
+              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+                Proyek website galeri foto pada Uji Kompetensi Rekayasa Perangkat Lunak (UKOM RPL) dengan predikat Kompeten. Menghadirkan katalogisasi arsip visual terstruktur, upload gambar resolusi optimal, dan pengelompokan album responsif.
+              </p>
+
+              <!-- Mockup Preview Box -->
+              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center justify-between font-code text-[11px]">
+                <span>SMKN 11 Malang</span>
+                <span class="font-bold text-amber-200">Predikat: Kompeten</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
+                <span class="px-2 py-0.5 rounded bg-white/15">PHP</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">MySQL</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">HTML5/CSS3</span>
+                <span class="px-2 py-0.5 rounded bg-white/15">JavaScript</span>
+              </div>
+              <a class="inline-flex items-center gap-2 bg-white text-[#C28352] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>Lihat di GitHub</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: SERTIFIKAT & PRESTASI ==================== -->
+    <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20" id="sertifikat">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
+        
+        <div class="flex items-center justify-between mb-8 sm:mb-12">
+          <div>
+            <span class="font-code text-[11px] tracking-widest uppercase text-clay font-bold block mb-1">PENGHARGAAN</span>
+            <h2 class="font-display text-[26px] sm:text-[36px] uppercase tracking-tight">Sertifikat &amp; Prestasi</h2>
+          </div>
+          <span class="font-code text-[13px] font-bold text-clay">4 Terverifikasi</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          
+          <!-- Cert 1 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div class="flex flex-col gap-2">
+              <span class="font-code text-[11px] font-bold text-clay">2024 &bull; Rakryan / UKOM</span>
+              <h3 class="font-heading font-bold text-[15px] leading-snug">Sertifikat Kompetensi Rekayasa Perangkat Lunak</h3>
+              <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">SMKN 11 Malang &amp; PT WeSolve Solusi Indonesia</p>
+            </div>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Kompeten</span>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div class="flex flex-col gap-2">
+              <span class="font-code text-[11px] font-bold text-clay">2024 &bull; UMM</span>
+              <h3 class="font-heading font-bold text-[15px] leading-snug">Pelatihan Pembentukan Kepribadian &amp; Kepemimpinan</h3>
+              <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">P2KK Universitas Muhammadiyah Malang</p>
+            </div>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Lulus</span>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div class="flex flex-col gap-2">
+              <span class="font-code text-[11px] font-bold text-clay">2023 &bull; Industri</span>
+              <h3 class="font-heading font-bold text-[15px] leading-snug">Sertifikat Praktik Kerja Lapangan (PKL)</h3>
+              <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">CV. Golden Mandiri, Malang</p>
+            </div>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Terverifikasi</span>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div class="flex flex-col gap-2">
+              <span class="font-code text-[11px] font-bold text-clay">2021 &bull; Kominfo</span>
+              <h3 class="font-heading font-bold text-[15px] leading-snug">Literasi Digital Nasional "Bebas Berekspresi"</h3>
+              <p class="font-body text-[12px] text-neutral-500 dark:text-neutral-400 mt-1">Kementerian Kominfo &amp; Siberkreasi</p>
+            </div>
+            <span class="mt-4 px-2.5 py-1 rounded-md bg-sand dark:bg-sand-dark text-clay dark:text-clay-light font-code text-[10px] font-bold w-fit uppercase">Nasional</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: KONTAK (TYPOGRAPHIC & CLEAN) ==================== -->
+    <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20" id="kontak">
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col items-center text-center">
+        
+        <span class="font-code text-[12px] tracking-widest uppercase text-clay font-bold mb-3">SIAP BERKOLABORASI</span>
+        <h2 class="font-display text-[32px] xs:text-[44px] sm:text-[64px] uppercase tracking-tight text-[#111111] dark:text-[#F5F0E8] max-w-3xl leading-none">
+          MARI TERHUBUNG &amp; BERKARYA
+        </h2>
+        <p class="font-body text-[15px] sm:text-[17px] text-neutral-600 dark:text-neutral-400 max-w-xl mt-4">
+          Terbuka untuk kesempatan magang, proyek pengembangan website, dan pembuatan konten digital.
+        </p>
+
+        <!-- 4 Quick Connect Action Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl mt-10">
+          
+          <!-- WhatsApp -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-sand dark:bg-sand-dark text-clay flex items-center justify-center material-symbols-outlined text-[20px]">chat</span>
+            <span class="font-code text-[10px] uppercase tracking-wider text-neutral-400 font-bold">WhatsApp</span>
+            <div class="flex items-center gap-1.5">
+              <a href="https://wa.me/628993352618" target="_blank" rel="noopener noreferrer" class="font-heading font-bold text-[14px] hover:text-clay">08993352618</a>
+              <button type="button" data-copy="08993352618" aria-label="Salin nomor WhatsApp" class="text-neutral-400 hover:text-clay">
+                <span class="material-symbols-outlined text-[15px]">content_copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-sand dark:bg-sand-dark text-clay flex items-center justify-center material-symbols-outlined text-[20px]">mail</span>
+            <span class="font-code text-[10px] uppercase tracking-wider text-neutral-400 font-bold">Email</span>
+            <div class="flex items-center gap-1.5 max-w-full">
+              <a href="mailto:ryfaathirrahman@gmail.com" class="font-heading font-bold text-[12px] truncate hover:text-clay">ryfaathirrahman@gmail.com</a>
+              <button type="button" data-copy="ryfaathirrahman@gmail.com" aria-label="Salin alamat email" class="text-neutral-400 hover:text-clay shrink-0">
+                <span class="material-symbols-outlined text-[15px]">content_copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <a href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col items-center gap-2 group hover:border-clay transition-colors">
+            <div class="w-10 h-10 rounded-full bg-sand dark:bg-sand-dark text-clay flex items-center justify-center">
+              <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+            </div>
+            <span class="font-code text-[10px] uppercase tracking-wider text-neutral-400 font-bold">GitHub</span>
+            <span class="font-heading font-bold text-[14px]">ryfaathir345</span>
+          </a>
+
+          <!-- Domisili -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-darksurface border border-[#E5DEC9] dark:border-[#2C2824] flex flex-col items-center gap-2">
+            <span class="w-10 h-10 rounded-full bg-sand dark:bg-sand-dark text-clay flex items-center justify-center material-symbols-outlined text-[20px]">location_on</span>
+            <span class="font-code text-[10px] uppercase tracking-wider text-neutral-400 font-bold">Domisili</span>
+            <span class="font-heading font-bold text-[14px]">Malang, Jatim</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full py-8 border-t border-[#E5DEC9] dark:border-[#2C2824] bg-[#FAF7F2] dark:bg-[#0F0F0F]">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="font-display text-[14px]">RR</span>
+        <span class="text-neutral-400">&bull;</span>
+        <span class="font-body text-[12px] text-neutral-600 dark:text-neutral-400">&copy; 2026 Ryfaathir Rahman. All rights reserved.</span>
+      </div>
+      <p class="font-code text-[11px] text-neutral-500 uppercase tracking-widest">Informatics Engineering &bull; Malang</p>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING BACK TO TOP BUTTON ==================== -->
+  <button id="back-to-top" aria-label="Kembali ke atas" class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 w-11 h-11 rounded-full bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] shadow-xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-clay dark:hover:bg-clay dark:hover:text-white hover:scale-105 active:scale-95">
+    <span class="material-symbols-outlined text-[20px] pointer-events-none">arrow_upward</span>
+  </button>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-full bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading font-semibold text-[12px] uppercase tracking-wider shadow-2xl border border-clay/30 flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300">
+    <span class="material-symbols-outlined text-[16px] text-clay">check_circle</span>
+    <span id="toast-text">Tersalin ke papan klip!</span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Toggle
+      const mobileToggleBtn = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+      if (mobileToggleBtn && mobileMenu && menuIcon) {
+        mobileToggleBtn.addEventListener('click', () => {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.textContent = 'menu';
+            mobileToggleBtn.setAttribute('aria-label', 'Buka Menu Navigasi');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.textContent = 'close';
+            mobileToggleBtn.setAttribute('aria-label', 'Tutup Menu Navigasi');
+          }
+        });
+
+        mobileNavItems.forEach(item => {
+          item.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.textContent = 'menu';
+          });
+        });
+      }
+
+      // 2. Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.pushState(null, null, targetId);
+            }
+          }
+        });
+      });
+
+      // 3. ScrollSpy
+      const sections = document.querySelectorAll('section[id]');
+      const desktopNavItems = document.querySelectorAll('#desktop-nav .nav-item');
+
+      function handleScrollSpy() {
+        const scrollPosition = window.scrollY + 140;
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          desktopNavItems.forEach(item => {
+            const target = item.getAttribute('data-section');
+            if (target === currentSectionId) {
+              item.classList.add('text-clay', 'border-clay');
+              item.classList.remove('text-neutral-600', 'dark:text-neutral-400', 'border-transparent');
+            } else {
+              item.classList.remove('text-clay', 'border-clay');
+              item.classList.add('text-neutral-600', 'dark:text-neutral-400', 'border-transparent');
+            }
+          });
+        }
+      }
+
+      // 4. Back to Top Button
+      const backToTopBtn = document.getElementById('back-to-top');
+      function handleBackToTop() {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 350) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+      }
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      window.addEventListener('scroll', () => {
+        handleScrollSpy();
+        handleBackToTop();
+      }, { passive: true });
+
+      handleScrollSpy();
+      handleBackToTop();
+
+      // 5. Category Filter
+      const filterButtons = document.querySelectorAll('.project-filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-[#111111]', 'dark:bg-[#F5F0E8]', 'text-[#FAF7F2]', 'dark:text-[#111111]', 'font-semibold');
+            b.classList.add('text-neutral-600', 'dark:text-neutral-400', 'border', 'border-[#E5DEC9]', 'dark:border-[#2C2824]', 'font-medium');
+          });
+          btn.classList.add('bg-[#111111]', 'dark:bg-[#F5F0E8]', 'text-[#FAF7F2]', 'dark:text-[#111111]', 'font-semibold');
+          btn.classList.remove('text-neutral-600', 'dark:text-neutral-400', 'border', 'border-[#E5DEC9]', 'dark:border-[#2C2824]');
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 6. Service Worker Registration
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.warn('[SW] Registration failed:', err);
+          });
+        });
+      }
+
+      // 7. Dark Mode Toggle
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+
+      function syncThemeIcon() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (themeIcon) {
+          themeIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+        }
+      }
+      syncThemeIcon();
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.theme = isDark ? 'dark' : 'light';
+          syncThemeIcon();
+        });
+      }
+
+      // 8. Copy-to-Clipboard with Toast Feedback
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      let toastTimeout;
+
+      function triggerToast(message) {
+        if (!toast || !toastText) return;
+        toastText.textContent = message;
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.add('opacity-0', 'pointer-events-none');
+        }, 2200);
+      }
+
+      document.querySelectorAll('[data-copy]').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const textToCopy = btn.getAttribute('data-copy');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textToCopy)
+              .then(() => triggerToast(`${textToCopy} tersalin!`))
+              .catch(() => triggerToast('Gagal menyalin'));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
