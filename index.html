@@ -57,8 +57,8 @@
   }
   </script>
 
-  <!-- ==================== GOOGLE FONTS ==================== -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <!-- ==================== GOOGLE FONTS (EDITORIAL NEO-GROTESK & DEV MONOSPACE) ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
 
   <!-- ==================== BASE STYLES & CSS VARIABLES ==================== -->
   <style>
@@ -150,6 +150,22 @@
       box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.18);
     }
 
+    /* Avatar Bounce Animation for Live Thing */
+    @keyframes avatar-bounce {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      30% {
+        transform: translateY(-12px) scale(1.06);
+      }
+      50% {
+        transform: translateY(2px) scale(0.98);
+      }
+      70% {
+        transform: translateY(-4px) scale(1.02);
+      }
+    }
+
     /* Project Columns Desktop Flex Growth */
     @media (min-width: 1024px) {
       .project-strip {
@@ -234,10 +250,10 @@
             proj6: "#C28352", /* Warm Terracotta */
           },
           fontFamily: {
-            display: ["'Archivo Black'", "sans-serif"],
-            heading: ["'Poppins'", "sans-serif"],
-            body: ["'Poppins'", "sans-serif"],
-            code: ["'Space Grotesk'", "monospace"],
+            display: ["'Schibsted Grotesk'", "sans-serif"],
+            heading: ["'Schibsted Grotesk'", "sans-serif"],
+            body: ["'Schibsted Grotesk'", "sans-serif"],
+            code: ["'JetBrains Mono'", "ui-monospace", "monospace"],
           }
         }
       }
@@ -246,68 +262,68 @@
 </head>
 <body class="font-body text-[#111111] dark:text-[#F5F0E8] bg-[#FAF7F2] dark:bg-[#0F0F0F] selection:bg-clay/20 selection:text-clay-dark w-full max-w-full overflow-x-hidden relative">
 
-  <!-- ==================== HEADER & NAVBAR ==================== -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/90 dark:bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#E5DEC9]/60 dark:border-[#2C2824] transition-all duration-300">
-    <div class="h-16 sm:h-20 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-4">
+  <!-- ==================== ACCESSIBILITY SKIP LINK ==================== -->
+  <a href="#beranda" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#111111] focus:text-[#FAF7F2] dark:focus:bg-[#F5F0E8] dark:focus:text-[#111111] focus:font-heading focus:text-sm focus:rounded-md focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-clay">
+    Lewati ke konten utama
+  </a>
 
-      <!-- Brand Logo -->
-      <a href="#beranda" class="flex items-center gap-2 group shrink-0">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] flex items-center justify-center font-display text-[15px] group-hover:scale-105 transition-transform">
-          RR
-        </div>
-        <div class="flex items-center gap-1.5">
-          <span class="font-heading font-bold text-[14px] sm:text-[16px] tracking-tight uppercase">Ryfaathir</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-clay inline-block"></span>
-        </div>
+  <!-- ==================== HEADER & NAVBAR (ANTI-SLOP EDITORIAL BAR) ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2] dark:bg-[#0F0F0F] border-b border-[#E5DEC9] dark:border-[#24201C] transition-colors">
+    <div class="h-16 sm:h-20 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-6">
+
+      <!-- Wordmark (Clean editorial typography, no circular badge) -->
+      <a href="#beranda" class="flex items-baseline gap-2.5 group shrink-0">
+        <span class="font-display text-[17px] sm:text-[19px] tracking-tight text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors">
+          Ryfaathir Rahman
+        </span>
+        <span class="font-code text-[11px] text-neutral-400 dark:text-neutral-500 hidden sm:inline">
+          / Informatika
+        </span>
       </a>
 
-      <!-- Desktop Navigation Menu (Minimalist Uppercase + Underline Indicator) -->
-      <nav id="desktop-nav" class="hidden xl:flex items-center gap-6 2xl:gap-8">
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-semibold text-clay transition-colors pb-1 border-b-2 border-clay" data-section="beranda" href="#beranda">Beranda</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="tentang" href="#tentang">Tentang</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="keterampilan" href="#keterampilan">Keterampilan</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="proyek" href="#proyek">Proyek</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="pengalaman" href="#pengalaman">Pengalaman</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="pendidikan" href="#pendidikan">Pendidikan</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="sertifikat" href="#sertifikat">Sertifikat</a>
-        <a class="nav-item relative font-heading text-[12px] tracking-wider uppercase font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors pb-1 border-b-2 border-transparent" data-section="kontak" href="#kontak">Kontak</a>
+      <!-- Desktop Navigation Menu (Direct, calm, 6 core links) -->
+      <nav id="desktop-nav" class="hidden md:flex items-center gap-7 lg:gap-9 text-[13px] font-heading font-medium">
+        <a class="nav-item text-clay transition-colors" data-section="beranda" href="#beranda">Beranda</a>
+        <a class="nav-item text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" data-section="tentang" href="#tentang">Tentang</a>
+        <a class="nav-item text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" data-section="keterampilan" href="#keterampilan">Keahlian</a>
+        <a class="nav-item text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" data-section="proyek" href="#proyek">Proyek</a>
+        <a class="nav-item text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" data-section="pengalaman" href="#pengalaman">Riwayat</a>
+        <a class="nav-item text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" data-section="kontak" href="#kontak">Kontak</a>
       </nav>
 
-      <!-- Action Buttons & Theme Toggle -->
-      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
-        <!-- Download CV Pill -->
-        <a id="btn-download-cv" class="hidden md:inline-flex items-center gap-1.5 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading font-semibold text-[12px] uppercase tracking-wider rounded-full px-5 py-2.5 hover:bg-clay dark:hover:bg-clay dark:hover:text-white transition-all shadow-sm active:scale-95" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
-          <span class="material-symbols-outlined text-[16px]">download</span>
+      <!-- Action & Toggle -->
+      <div class="flex items-center gap-4 sm:gap-6 shrink-0">
+        <!-- Direct CV Link (No chunky pill shadow) -->
+        <a id="btn-download-cv" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf" class="hidden sm:inline-flex items-center gap-1 font-heading text-[12px] font-semibold text-neutral-900 dark:text-neutral-200 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors">
           <span>Unduh CV</span>
+          <span class="font-code text-[11px]">&darr;</span>
         </a>
 
-        <!-- Dark/Light Mode Toggle Button -->
-        <button id="theme-toggle" aria-label="Ganti Tema Gelap/Terang" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E5DEC9] dark:border-[#2C2824] hover:border-clay flex items-center justify-center text-neutral-700 dark:text-neutral-300 transition-colors shrink-0" type="button">
-          <span id="theme-icon" class="material-symbols-outlined text-[19px]">dark_mode</span>
+        <!-- Dark/Light Mode (Clean icon, no pill border chrome) -->
+        <button id="theme-toggle" aria-label="Ganti Tema Gelap/Terang" class="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white p-1 transition-colors flex items-center justify-center" type="button">
+          <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
         </button>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E5DEC9] dark:border-[#2C2824] flex items-center justify-center text-neutral-800 dark:text-neutral-200 transition-colors shrink-0" type="button">
-          <span id="menu-icon" class="material-symbols-outlined text-[22px]">menu</span>
+        <!-- Mobile Menu Toggle (Clean icon) -->
+        <button id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" class="md:hidden text-neutral-800 dark:text-neutral-200 p-1 transition-colors flex items-center justify-center" type="button">
+          <span id="menu-icon" class="material-symbols-outlined text-[24px]">menu</span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden xl:hidden bg-[#FAF7F2] dark:bg-[#0F0F0F] border-b border-[#E5DEC9] dark:border-[#2C2824] shadow-xl transition-all duration-300 px-6 py-6">
-      <div class="max-w-[400px] mx-auto flex flex-col gap-2">
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider font-semibold text-clay" href="#beranda">Beranda</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#tentang">Tentang</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#keterampilan">Keterampilan</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#proyek">Proyek</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#pengalaman">Pengalaman</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#pendidikan">Pendidikan</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#sertifikat">Sertifikat</a>
-        <a class="mobile-nav-item py-2 px-3 rounded-lg font-heading text-[13px] uppercase tracking-wider text-neutral-700 dark:text-neutral-300 hover:text-clay" href="#kontak">Kontak</a>
-        <div class="pt-3 border-t border-[#E5DEC9] dark:border-[#2C2824] mt-2">
-          <a class="w-full inline-flex items-center justify-center gap-2 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] font-heading text-[12px] font-semibold uppercase tracking-wider rounded-full py-3" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
-            <span class="material-symbols-outlined text-[16px]">download</span>
+    <!-- Mobile Navigation Drawer (Clean editorial stack, no pill buttons) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAF7F2] dark:bg-[#0F0F0F] border-b border-[#E5DEC9] dark:border-[#24201C] px-6 py-5">
+      <div class="flex flex-col gap-3 font-heading text-[14px]">
+        <a class="mobile-nav-item py-1 font-semibold text-clay" href="#beranda">Beranda</a>
+        <a class="mobile-nav-item py-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white" href="#tentang">Tentang</a>
+        <a class="mobile-nav-item py-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white" href="#keterampilan">Keahlian</a>
+        <a class="mobile-nav-item py-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white" href="#proyek">Proyek</a>
+        <a class="mobile-nav-item py-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white" href="#pengalaman">Riwayat</a>
+        <a class="mobile-nav-item py-1 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white" href="#kontak">Kontak</a>
+        <div class="pt-3 border-t border-[#E5DEC9] dark:border-[#24201C]">
+          <a class="inline-flex items-center gap-1.5 font-semibold text-neutral-900 dark:text-neutral-200 hover:text-clay underline underline-offset-4 decoration-clay/40" href="assets/docs/CV_Ryfaathir_Rahman.pdf" download="CV_Ryfaathir_Rahman.pdf">
             <span>Unduh Berkas CV</span>
+            <span class="font-code">&darr;</span>
           </a>
         </div>
       </div>
@@ -335,7 +351,7 @@
         <!-- GIANT PLAYFUL "PORTFOLIO" TITLE WITH FREESTANDING CUTOUT ILLUSTRATION -->
         <div class="relative w-full max-w-5xl mt-8 sm:mt-12 lg:mt-14 mb-6 sm:mb-10 flex items-center justify-center select-none overflow-visible">
           <!-- Big Letters Container with Staggered Jitter Rotations (flex-nowrap so letters never break onto 2 lines) -->
-          <h1 class="font-display leading-none text-black dark:text-[#F5F0E8] tracking-tighter flex items-center justify-center flex-nowrap whitespace-nowrap pointer-events-none w-full" style="font-size: clamp(2.3rem, 9.4vw, 8.4rem);">
+          <h1 class="font-display font-black leading-none text-black dark:text-[#F5F0E8] tracking-tighter flex items-center justify-center flex-nowrap whitespace-nowrap pointer-events-none w-full" style="font-size: clamp(2.3rem, 9.4vw, 8.4rem);">
             <span class="inline-block transform -rotate-6 -translate-y-1">P</span>
             <span class="inline-block transform rotate-3 translate-y-0.5">O</span>
             <span class="inline-block transform -rotate-3 -translate-y-1">R</span>
@@ -349,14 +365,28 @@
 
           <!-- Freestanding Cartoon Character Cutout (Overlapping "PORTFOLIO" with No Circular Border) -->
           <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-            <img 
-              id="user-avatar-img" 
-              src="assets/images/kartun.jpg" 
-              alt="Ryfaathir Rahman" 
-              class="w-36 xs:w-44 sm:w-56 md:w-68 lg:w-76 xl:w-[310px] h-auto object-contain pointer-events-auto transition-transform duration-300 hover:scale-105 filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] dark:drop-shadow-[0_14px_28px_rgba(0,0,0,0.65)] transform -translate-y-2 xs:-translate-y-3 sm:-translate-y-4 md:-translate-y-5" 
-              fetchpriority="high" 
-              decoding="async" 
-              onerror="if (this.src.indexOf('kartun.png') === -1) { this.src='assets/images/kartun.png'; } else if (this.src.indexOf('profile.jpg') === -1) { this.src='assets/images/profile.jpg'; }">
+            <button 
+              id="avatar-interact-btn" 
+              type="button"
+              aria-label="Avatar Ryfaathir Rahman — klik untuk interaksi"
+              class="pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAF7F2] dark:focus-visible:ring-offset-[#0F0F0F] cursor-pointer"
+            >
+              <img 
+                id="user-avatar-img" 
+                src="assets/images/kartun.png" 
+                alt="Ryfaathir Rahman, ilusi kartun lucu dengan gestur rock" 
+                width="405"
+                height="398"
+                class="w-36 xs:w-44 sm:w-56 md:w-68 lg:w-76 xl:w-[310px] h-auto object-contain transition-transform duration-300 hover:scale-105 filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] dark:drop-shadow-[0_14px_28px_rgba(0,0,0,0.65)] transform -translate-y-2 xs:-translate-y-3 sm:-translate-y-4 md:-translate-y-5"
+                fetchpriority="high" 
+                decoding="async"
+                onerror="if (this.src.indexOf('kartun.jpg') === -1) { this.src='assets/images/kartun.jpg'; } else if (this.src.indexOf('profile.jpg') === -1) { this.src='assets/images/profile.jpg'; }"
+              >
+            </button>
+            <!-- Tooltip / Live Region for Interaction Feedback -->
+            <div id="avatar-tooltip" role="status" aria-live="polite" aria-atomic="true" class="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 pointer-events-none transition-opacity duration-200 px-3 py-1.5 bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] text-[11px] font-code rounded-full">
+              Ryfaathir Rahman · Web & Digital Content
+            </div>
           </div>
         </div>
 
@@ -414,7 +444,7 @@
 
                 <!-- Avatar Frame Inside Card -->
                 <div class="w-32 h-32 rounded-xl overflow-hidden bg-sand dark:bg-neutral-800 border-2 border-clay/40 mb-4 shadow-sm">
-                  <img src="assets/images/profile.jpg" alt="Ryfaathir Rahman ID" class="w-full h-full object-cover object-[center_40%]" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23A68B6A\'/><text x=\'50\' y=\'58\' font-size=\'36\' font-weight=\'bold\' fill=\'%23FAF7F2\' text-anchor=\'middle\' font-family=\'sans-serif\'>RR</text></svg>'">
+                  <img src="assets/images/profile.jpg" alt="Ryfaathir Rahman ID" width="768" height="1024" class="w-full h-full object-cover object-[center_40%]" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23A68B6A\'/><text x=\'50\' y=\'58\' font-size=\'36\' font-weight=\'bold\' fill=\'%23FAF7F2\' text-anchor=\'middle\' font-family=\'sans-serif\'>RR</text></svg>'">
                 </div>
 
                 <h3 class="font-heading font-bold text-[18px] text-[#111111] dark:text-[#F5F0E8] uppercase tracking-tight">Ryfaathir Rahman</h3>
@@ -581,20 +611,13 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION 4: DAFTAR PROYEK (OUTLINE RAKSASA + 6 KOLOM SOLID) ==================== -->
+    <!-- ==================== SECTION 4: DAFTAR PROYEK (EDITORIAL CURATED WORK) ==================== -->
     <section class="w-full py-16 sm:py-24 border-t border-[#E5DEC9] dark:border-[#2C2824] scroll-mt-20 overflow-hidden" id="proyek">
       <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10">
 
-        <!-- Header: Outlined Giant Text + Floating Numbers -->
-        <div class="relative py-6 sm:py-10 flex flex-col items-center justify-center select-none text-center">
-          <!-- Floating Accent Numbers 01 - 06 (Crisp & Visible in both Light and Dark mode) -->
-          <span class="absolute left-4 top-0 font-display text-[26px] sm:text-[40px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform -rotate-12 font-bold select-none">01</span>
-          <span class="absolute right-12 top-2 font-display text-[24px] sm:text-[36px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform rotate-12 font-bold select-none">03</span>
-          <span class="absolute left-1/4 bottom-0 font-display text-[28px] sm:text-[44px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform -rotate-6 font-bold select-none">05</span>
-          <span class="absolute right-1/4 bottom-2 font-display text-[24px] sm:text-[38px] text-neutral-300 dark:text-neutral-700 pointer-events-none transform rotate-6 font-bold select-none">06</span>
-
-          <!-- Giant Stroke Title -->
-          <h2 class="text-outline-giant font-display text-[44px] xs:text-[60px] sm:text-[88px] lg:text-[116px] leading-none uppercase">
+        <!-- Header: Outlined Giant Text -->
+        <div class="relative py-6 sm:py-8 flex flex-col items-center justify-center select-none text-center">
+          <h2 class="text-outline-giant font-display font-black text-[44px] xs:text-[60px] sm:text-[88px] lg:text-[116px] leading-none uppercase">
             PROYEK
           </h2>
           <p class="font-heading text-[13px] sm:text-[14px] uppercase tracking-widest text-clay-dark dark:text-clay-light font-extrabold -mt-2 sm:-mt-4 z-10">
@@ -604,273 +627,269 @@
 
         <!-- Filter Pill Tabs -->
         <div class="flex flex-wrap items-center justify-center gap-2 my-8" id="project-filters">
-          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-semibold bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] transition-all" data-filter="all">Semua (6)</button>
-          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="web">Web &amp; Fullstack (3)</button>
-          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="ai">AI &amp; SaaS (1)</button>
-          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="mobile">Mobile App (1)</button>
-          <button class="project-filter-btn px-4 py-2 rounded-full font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="desktop">Desktop (1)</button>
+          <button class="project-filter-btn px-4 py-2 font-heading text-[12px] uppercase tracking-wider font-semibold bg-[#111111] dark:bg-[#F5F0E8] text-[#FAF7F2] dark:text-[#111111] transition-all" data-filter="all">Semua (6)</button>
+          <button class="project-filter-btn px-4 py-2 font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="web">Web &amp; Fullstack (3)</button>
+          <button class="project-filter-btn px-4 py-2 font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="ai">AI &amp; SaaS (1)</button>
+          <button class="project-filter-btn px-4 py-2 font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="mobile">Mobile App (1)</button>
+          <button class="project-filter-btn px-4 py-2 font-heading text-[12px] uppercase tracking-wider font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-[#E5DEC9] dark:border-[#2C2824] transition-all" data-filter="desktop">Desktop (1)</button>
         </div>
 
-        <!-- 6 PROJECT CARDS: Solid Colorful Vertical Columns -->
+        <!-- 6 PROJECT CARDS: Unified Neutral Editorial Surface -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch" id="projects-container">
 
-          <!-- PROYEK 1: CreatorVault (Solid Color: #4F6FD1 Royal Blue) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#4F6FD1] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+          <!-- PROYEK 1: CreatorVault -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="web">
             <div class="flex flex-col gap-4">
-              <!-- Top Header: Category Tag & Huge Number -->
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm font-code text-[11px] font-bold uppercase tracking-wider">
-                  Web &bull; E-Commerce
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">01</span>
+              <!-- Header Meta: Category & Year -->
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>Web &bull; E-Commerce</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
-              <!-- Project Title & Subtitle -->
+              <!-- Title & Subtitle -->
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">CreatorVault</h3>
-                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Platform E-Commerce Produk Digital &amp; Payment Gateway Otomatis</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">CreatorVault</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Platform E-Commerce Produk Digital &amp; Payment Gateway</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Platform etalase dan transaksi produk digital modern bertenaga Next.js 14 App Router. Dilengkapi integrasi Midtrans Snap (QRIS &amp; Virtual Account), verifikasi otomatis Webhook Listener SHA-512 anti-fraud, serta link download token 256-bit berbatas waktu 24 jam.
               </p>
 
-              <!-- Mockup Preview Mini Box -->
-              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex flex-col gap-2 font-code text-[11px]">
-                <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                  <span>creatorvault.store</span>
-                  <span class="text-emerald-300 font-bold">QRIS Instant</span>
+              <!-- Architecture Preview Box -->
+              <div class="p-3.5 bg-[#FAF7F2] dark:bg-[#1A1815] border border-[#E5DEC9]/60 dark:border-[#24201C] flex flex-col gap-2 font-mono text-[11px]">
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Arsitektur</span>
+                  <span class="text-neutral-900 dark:text-neutral-200 font-semibold">Next.js 14 App Router</span>
                 </div>
-                <div class="flex justify-between items-center text-white/80">
-                  <span>SaaS Starter Kit</span>
-                  <span class="font-bold text-white">Rp 149.000</span>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Payment Gateway</span>
+                  <span class="text-clay font-bold">Midtrans Snap + Webhook</span>
+                </div>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Keamanan</span>
+                  <span class="text-neutral-700 dark:text-neutral-300">SHA-512 Token 256-bit</span>
                 </div>
               </div>
             </div>
 
             <!-- Footer Stack & GitHub Link -->
-            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
-                <span class="px-2 py-0.5 rounded bg-white/15">Next.js 14</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">TypeScript</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Midtrans SDK</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Prisma</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Next.js 14</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">TypeScript</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Prisma</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-white text-[#4F6FD1] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- PROYEK 2: ShadownClip V3 (Solid Color: #D4CBB8 Warm Cream) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-neutral-900 bg-[#D4CBB8] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="ai">
+          <!-- PROYEK 2: ShadownClip V3 -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="ai">
             <div class="flex flex-col gap-4">
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-black/10 font-code text-[11px] font-bold uppercase tracking-wider text-neutral-800">
-                  AI &bull; SaaS Platform
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-black/50 select-none">02</span>
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>AI &bull; SaaS Platform</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-neutral-900">ShadownClip V3</h3>
-                <p class="font-heading text-[13px] text-neutral-700 font-semibold mt-1">Automated YouTube to 9:16 Shorts AI Pipeline &amp; VIP SaaS</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">ShadownClip V3</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Automated YouTube to 9:16 Shorts AI Pipeline &amp; VIP SaaS</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-neutral-800 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Platform web bertenaga AI dengan model bisnis SaaS freemium yang mengotomatisasi pengubahan video panjang YouTube menjadi klip vertikal format 9:16 (Shorts, TikTok, Reels). Dilengkapi Payment Midtrans VIP, Whisper subtitle dinamis, dan Gemini Flash.
               </p>
 
               <!-- Image / Mockup Preview -->
-              <div class="rounded-xl overflow-hidden bg-black/10 border border-black/10 h-32 flex items-center justify-center relative">
-                <img src="assets/images/shadownclip-preview.png" alt="ShadownClip Preview" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hidden flex-col items-center justify-center text-neutral-700">
-                  <span class="material-symbols-outlined text-[32px]">movie_filter</span>
-                  <span class="font-code text-[11px] font-bold">9:16 Video Clipper</span>
-                </div>
+              <div class="aspect-[16/9] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-[#E5DEC9]/60 dark:border-[#24201C]">
+                <img src="assets/images/shadownclip-preview.png" alt="ShadownClip Preview" width="373" height="536" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
               </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-black/15 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-neutral-800">
-                <span class="px-2 py-0.5 rounded bg-black/10">FastAPI</span>
-                <span class="px-2 py-0.5 rounded bg-black/10">Whisper AI</span>
-                <span class="px-2 py-0.5 rounded bg-black/10">Gemini Flash</span>
-                <span class="px-2 py-0.5 rounded bg-black/10">Celery + Redis</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">FastAPI</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Whisper</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Gemini</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-neutral-900 text-white font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-800 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- PROYEK 3: Horti-Apps (Solid Color: #6C8B58 Sage Green) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#6C8B58] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+          <!-- PROYEK 3: Horti-Apps -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="web">
             <div class="flex flex-col gap-4">
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
-                  Web &bull; Marketplace
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">03</span>
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>Web &bull; Marketplace</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">Horti-Apps</h3>
-                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Platform Marketplace Pertanian Terintegrasi WhatsApp API</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">Horti-Apps</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Platform Marketplace Pertanian Terintegrasi WhatsApp API</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Platform web marketplace agrikultur modern berbasis arsitektur Laravel yang menghubungkan Petani lokal dengan Pengepul. Dasbor terspesialisasi untuk 3 peran (Petani, Pengepul, Admin), verifikasi KYC, dan transaksi langsung via WhatsApp API.
               </p>
 
               <!-- Image / Mockup Preview -->
-              <div class="rounded-xl overflow-hidden bg-black/20 border border-white/15 h-32 flex items-center justify-center relative">
-                <img src="assets/images/horti-apps-preview.png" alt="Horti-Apps Preview" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hidden flex-col items-center justify-center text-white">
-                  <span class="material-symbols-outlined text-[32px]">storefront</span>
-                  <span class="font-code text-[11px] font-bold">Horti Market Live</span>
-                </div>
+              <div class="aspect-[16/9] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-[#E5DEC9]/60 dark:border-[#24201C]">
+                <img src="assets/images/horti-apps-preview.png" alt="Horti-Apps Preview" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
               </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
-                <span class="px-2 py-0.5 rounded bg-white/15">PHP 8.2</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Laravel</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">MySQL</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">WhatsApp API</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Laravel</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">PHP 8.2</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">MySQL</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-white text-[#6C8B58] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- PROYEK 4: LifeHub V2 (Solid Color: #E05353 Coral Red) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#E05353] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="mobile">
+          <!-- PROYEK 4: LifeHub V2 -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="mobile">
             <div class="flex flex-col gap-4">
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
-                  Mobile App &bull; Flutter
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">04</span>
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>Mobile App &bull; Flutter</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">LifeHub V2</h3>
-                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Personal Life Management &amp; Productivity App</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">LifeHub V2</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Personal Life Management &amp; Productivity App</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Aplikasi mobile produktivitas pintar berbasis Flutter: Pelacak Keuangan (FL Chart), Brankas Password Terenkripsi (AES-256 &amp; Biometric), Jurnal Trading Multi-Market, serta Jadwal Kuliah. Berjalan 100% offline dengan Drift SQLite lokal.
               </p>
 
-              <!-- Mockup Preview Box -->
-              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center gap-3">
-                <img src="assets/images/lifehub-icon.png" alt="LifeHub Icon" class="w-10 h-10 rounded-xl bg-white/10 shrink-0" loading="lazy" decoding="async" onerror="this.style.display='none';">
-                <div class="flex flex-col font-code text-[11px]">
-                  <span class="font-bold">LifeHub Offline Vault</span>
-                  <span class="text-white/70">Drift SQLite &bull; Biometric</span>
+              <!-- App Icon & Vault Spec Box -->
+              <div class="p-3.5 bg-[#FAF7F2] dark:bg-[#1A1815] border border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center gap-3">
+                <img src="assets/images/lifehub-icon.png" alt="LifeHub Icon" width="44" height="44" class="w-11 h-11 rounded-lg bg-neutral-200 dark:bg-neutral-800 shrink-0" loading="lazy" decoding="async" onerror="this.style.display='none';">
+                <div class="flex flex-col font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
+                  <span class="font-bold text-neutral-900 dark:text-neutral-200">LifeHub Offline Vault</span>
+                  <span class="text-[10px] text-neutral-500">Drift SQLite &bull; Biometric Auth</span>
+                  <span class="text-[10px] text-clay mt-0.5">AES-256 Offline Storage</span>
                 </div>
               </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
-                <span class="px-2 py-0.5 rounded bg-white/15">Flutter</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Dart</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Drift SQLite</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">Biometric</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Flutter</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Dart</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">Drift</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-white text-[#E05353] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- PROYEK 5: RNM TWEAK (Solid Color: #758CD8 Soft Periwinkle) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#758CD8] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="desktop">
+          <!-- PROYEK 5: RNM TWEAK -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="desktop">
             <div class="flex flex-col gap-4">
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
-                  Desktop &bull; Windows
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">05</span>
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>Desktop &bull; Windows</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">RNM TWEAK</h3>
-                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Windows Optimization &amp; System Utility</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">RNM TWEAK</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Windows Optimization &amp; System Utility</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Aplikasi desktop Windows utilitas performa tinggi dibangun dengan C# .NET 8 dan Windows 11 Fluent UI (Wpf.Ui). Pemantauan telemetri hardware real-time (CPU, GPU, RAM), Game Booster 1-klik, dan 50+ konfigurasi tweak sistem.
               </p>
 
-              <!-- Mockup Preview Box -->
-              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center justify-between font-code text-[11px]">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                  <span>1-Click Booster</span>
+              <!-- Desktop Architecture Box -->
+              <div class="p-3.5 bg-[#FAF7F2] dark:bg-[#1A1815] border border-[#E5DEC9]/60 dark:border-[#24201C] flex flex-col gap-2 font-mono text-[11px]">
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Runtime</span>
+                  <span class="text-neutral-900 dark:text-neutral-200 font-semibold">.NET 8 LTS &bull; C# 12</span>
                 </div>
-                <span class="font-bold text-white">50+ Tweaks</span>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Interface</span>
+                  <span class="text-neutral-700 dark:text-neutral-300">WPF Fluent Win11</span>
+                </div>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Fitur Utama</span>
+                  <span class="text-clay font-bold">Hardware Monitor &bull; 50+ Tweaks</span>
+                </div>
               </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
-                <span class="px-2 py-0.5 rounded bg-white/15">C# 12</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">.NET 8 LTS</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">WPF Fluent</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">WinAPI</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">C# 12</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">.NET 8</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">WPF</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-white text-[#758CD8] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- PROYEK 6: Website Galeri Foto (Solid Color: #C28352 Warm Terracotta) -->
-          <div class="project-card rounded-2xl p-6 sm:p-7 text-white bg-[#C28352] flex flex-col justify-between shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-category="web">
+          <!-- PROYEK 6: Website Galeri Foto -->
+          <div class="project-card group bg-white dark:bg-[#141210] border border-[#E5DEC9] dark:border-[#24201C] p-6 sm:p-7 flex flex-col justify-between hover:border-clay dark:hover:border-clay transition-colors" data-category="web">
             <div class="flex flex-col gap-4">
-              <div class="flex items-start justify-between">
-                <span class="px-3 py-1 rounded-full bg-white/20 font-code text-[11px] font-bold uppercase tracking-wider">
-                  Web &bull; UKOM RPL
-                </span>
-                <span class="font-display text-[48px] sm:text-[56px] leading-none text-white/80 select-none">06</span>
+              <div class="flex items-baseline justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 pb-3 border-b border-[#E5DEC9]/50 dark:border-[#24201C]">
+                <span>Web &bull; UKOM RPL</span>
+                <span class="text-clay font-bold">2024</span>
               </div>
 
               <div>
-                <h3 class="font-heading font-bold text-[22px] sm:text-[24px] text-white">Website Galeri Foto</h3>
-                <p class="font-heading text-[13px] text-white/90 font-medium mt-1">Sistem Manajemen &amp; Kurasi Arsip Visual</p>
+                <h3 class="font-heading font-bold text-[20px] text-neutral-900 dark:text-[#F5F0E8] group-hover:text-clay transition-colors tracking-tight">Website Galeri Foto</h3>
+                <p class="font-heading text-[12px] text-neutral-500 dark:text-neutral-400 font-medium mt-1">Sistem Manajemen &amp; Kurasi Arsip Visual</p>
               </div>
 
-              <p class="font-body text-[13px] sm:text-[14px] text-white/85 leading-relaxed">
+              <p class="font-body text-[13px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Proyek website galeri foto pada Uji Kompetensi Rekayasa Perangkat Lunak (UKOM RPL) dengan predikat Kompeten. Menghadirkan katalogisasi arsip visual terstruktur, upload gambar resolusi optimal, dan pengelompokan album responsif.
               </p>
 
-              <!-- Mockup Preview Box -->
-              <div class="rounded-xl bg-black/25 p-3.5 border border-white/15 flex items-center justify-between font-code text-[11px]">
-                <span>SMKN 11 Malang</span>
-                <span class="font-bold text-amber-200">Predikat: Kompeten</span>
+              <!-- UKOM RPL Box -->
+              <div class="p-3.5 bg-[#FAF7F2] dark:bg-[#1A1815] border border-[#E5DEC9]/60 dark:border-[#24201C] flex flex-col gap-2 font-mono text-[11px]">
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Institusi</span>
+                  <span class="text-neutral-900 dark:text-neutral-200 font-semibold">SMKN 11 Malang</span>
+                </div>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Hasil Evaluasi</span>
+                  <span class="text-clay font-bold">Predikat: Kompeten</span>
+                </div>
+                <div class="flex items-center justify-between text-neutral-500 dark:text-neutral-400">
+                  <span>Stack</span>
+                  <span class="text-neutral-700 dark:text-neutral-300">PHP &bull; MySQL &bull; JS</span>
+                </div>
               </div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-white/20 flex flex-col gap-3">
-              <div class="flex flex-wrap gap-1.5 font-code text-[11px] text-white/90">
-                <span class="px-2 py-0.5 rounded bg-white/15">PHP</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">MySQL</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">HTML5/CSS3</span>
-                <span class="px-2 py-0.5 rounded bg-white/15">JavaScript</span>
+            <div class="pt-4 mt-5 border-t border-[#E5DEC9]/60 dark:border-[#24201C] flex items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">PHP</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">MySQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300">JS</span>
               </div>
-              <a class="inline-flex items-center gap-2 bg-white text-[#C28352] font-heading font-bold text-[12px] uppercase tracking-wider rounded-xl px-4 py-2.5 hover:bg-neutral-100 transition-colors w-fit" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
-                <span>Lihat di GitHub</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <a class="inline-flex items-center gap-1 font-heading font-semibold text-[12px] text-neutral-900 dark:text-neutral-100 hover:text-clay dark:hover:text-clay underline underline-offset-4 decoration-clay/40 transition-colors shrink-0" href="https://github.com/ryfaathir345" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span class="font-code text-[11px]">&rarr;</span>
               </a>
             </div>
           </div>
@@ -1205,6 +1224,58 @@
           }
         });
       });
+
+      // 9. Avatar Interaction (Live Thing)
+      const avatarBtn = document.getElementById('avatar-interact-btn');
+      const avatarTooltip = document.getElementById('avatar-tooltip');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (avatarBtn && avatarTooltip) {
+        const showTooltip = () => {
+          avatarTooltip.classList.remove('opacity-0');
+          avatarTooltip.classList.add('opacity-100');
+        };
+        const hideTooltip = () => {
+          avatarTooltip.classList.remove('opacity-100');
+          avatarTooltip.classList.add('opacity-0');
+        };
+
+        // Mouse interactions
+        avatarBtn.addEventListener('mouseenter', showTooltip);
+        avatarBtn.addEventListener('mouseleave', hideTooltip);
+        avatarBtn.addEventListener('focus', showTooltip);
+        avatarBtn.addEventListener('blur', hideTooltip);
+
+        // Click/Tap interaction - bounce animation
+        avatarBtn.addEventListener('click', () => {
+          if (!prefersReducedMotion) {
+            avatarBtn.style.animation = 'none';
+            avatarBtn.offsetHeight; // trigger reflow
+            avatarBtn.style.animation = 'avatar-bounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            setTimeout(() => {
+              avatarBtn.style.animation = '';
+            }, 500);
+          }
+          // Trigger toast for touch devices
+          if ('ontouchstart' in window) {
+            triggerToast('Ryfaathir Rahman · Web & Digital Content');
+          }
+        });
+
+        // Keyboard interaction
+        avatarBtn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            avatarBtn.click();
+          }
+        });
+      }
+
+      // 10. Respect prefers-reduced-motion for all transitions
+      if (prefersReducedMotion) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        document.documentElement.style.setProperty('--transition-duration', '0.01ms');
+      }
     });
   </script>
 </body>
